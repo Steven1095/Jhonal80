@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JHONAL 80 | Holding Textil & Confección Multimarca Colombia</title>
-  
+  <title>JHONAL 80 | Fábrica y marcas de confección en Colombia - Ventas al por mayor</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Buho jhonal.png">
+  <link rel="apple-touch-icon" href="Buho jhonal.png">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Lucide Icons CDN -->
@@ -46,7 +53,8 @@
   </script>
 
   <style>
-    html, body {
+    html,
+    body {
       background-color: #060709;
       color: #F3F4F6;
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -124,6 +132,7 @@
       border: 1px solid rgba(255, 255, 255, 0.08);
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
     .glass-card:hover {
       background: linear-gradient(135deg, rgba(26, 31, 44, 0.8) 0%, rgba(15, 18, 26, 0.9) 100%);
       border-color: rgba(255, 255, 255, 0.25);
@@ -164,9 +173,11 @@
     ::-webkit-scrollbar {
       width: 8px;
     }
+
     ::-webkit-scrollbar-track {
       background: #060709;
     }
+
     ::-webkit-scrollbar-thumb {
       background: #27272A;
       border-radius: 4px;
@@ -174,13 +185,14 @@
   </style>
 </head>
 
-<body x-data="appData()" @mousemove="updateSpotlight($event)" class="antialiased selection:bg-rose-500 selection:text-white relative overflow-x-hidden w-full">
+<body x-data="appData()" @mousemove="updateSpotlight($event)"
+  class="antialiased selection:bg-rose-500 selection:text-white relative overflow-x-hidden w-full">
 
-  <!-- 1. GRAPHIC BACKDROP WITH TRANSPARENCY FILTER (PM REQUEST) -->
+  <!-- 1. GRAPHIC BACKDROP WITH TRANSPARENCY FILTER -->
   <div class="hero-graphic-bg"></div>
   <div class="hero-vignette-overlay"></div>
   <div class="textile-grid-overlay"></div>
-  
+
   <!-- 2. KINETIC BRAND WATERMARK -->
   <div class="bg-watermark">JHONAL 80</div>
 
@@ -189,70 +201,120 @@
 
   <!-- 4. AMBIENT BRAND GLOWS -->
   <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
-    <div class="brand-glow w-[350px] sm:w-[550px] h-[350px] sm:h-[550px] bg-rose-600/15 top-[-100px] left-[-100px]"></div>
+    <div class="brand-glow w-[350px] sm:w-[550px] h-[350px] sm:h-[550px] bg-rose-600/15 top-[-100px] left-[-100px]">
+    </div>
     <div class="brand-glow w-[350px] sm:w-[650px] h-[350px] sm:h-[650px] bg-blue-600/10 top-[35%] right-[-100px]"></div>
     <div class="brand-glow w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-amber-600/10 bottom-[10%] left-[5%]"></div>
   </div>
 
-  <!-- TOP BAR NOTIFICATION (100% SOLID OPAQUE) -->
-  <div class="bg-gradient-to-r from-rose-900 via-rose-950 to-zinc-950 border-b border-rose-800/80 py-2.5 px-4 text-xs text-center text-zinc-200 flex items-center justify-center gap-2 shadow-md relative z-50">
-    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-rose-500 text-white shadow-sm uppercase tracking-wider">
-      Catálogos 2026
+  <!-- TOP BAR NOTIFICATION (ENFOQUE DISTRIBUIDORES & MAYORISTAS) -->
+  <div
+    class="bg-gradient-to-r from-rose-950 via-zinc-900 to-zinc-950 border-b border-rose-800/80 py-2.5 px-4 text-xs text-center text-zinc-200 flex flex-wrap items-center justify-center gap-2.5 shadow-md relative z-50">
+    <span
+      class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-rose-600 text-white shadow-sm uppercase tracking-wider animate-pulse">
+      <i data-lucide="sparkles" class="w-3 h-3"></i> Oportunidad mayorista
     </span>
-    <span class="font-medium">Atención a distribuidores y mayoristas a nivel nacional en Colombia</span>
-    <a href="#distribuidores" class="underline font-bold text-white hover:text-rose-300 ml-2 transition">Ser Distribuidor →</a>
+    <span class="font-medium text-zinc-100">
+      ¿Buscas rentabilidad para tu tienda o negocio? <strong>Conviértete en distribuidor oficial de Jhonal 80</strong> y
+      compra a precios directos de fábrica.
+    </span>
+    <a href="#distribuidores"
+      class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white text-zinc-950 hover:bg-rose-500 hover:text-white font-extrabold text-[11px] uppercase tracking-wider transition shadow-sm">
+      <span>Quiero ser distribuidor →</span>
+    </a>
   </div>
 
   <!-- NAVIGATION HEADER -->
   <header class="sticky top-0 z-50 glass-nav transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      
-      <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-zinc-800 to-zinc-950 border border-zinc-700 flex items-center justify-center font-heading font-black text-xl text-white shadow-inner group-hover:border-rose-500 transition-colors">
-          J<span class="text-rose-500">80</span>
+
+      <!-- Brand Logo con Medallón Búho Jhonal 80 -->
+      <a href="#" class="flex items-center gap-3.5 group relative py-1">
+        <div class="relative flex items-center justify-center">
+          <!-- Backlight Halo Glow to make the dark metallic owl pop -->
+          <div
+            class="absolute inset-0 rounded-full bg-gradient-to-tr from-rose-600/40 via-amber-500/20 to-zinc-200/30 blur-md group-hover:blur-lg group-hover:scale-110 transition-all duration-300">
+          </div>
+
+          <!-- Outer Silver/Metallic Rim Container -->
+          <div
+            class="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full p-[1.5px] bg-gradient-to-b from-zinc-200 via-zinc-500 to-zinc-900 shadow-2xl group-hover:from-rose-400 group-hover:to-zinc-100 transition-colors duration-300">
+            <img src="Buho jhonal.png" alt="Logo Jhonal 80 Búho"
+              class="w-full h-full object-contain rounded-full bg-zinc-950 filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] group-hover:scale-105 transition-transform duration-300">
+          </div>
         </div>
+
         <div class="flex flex-col">
-          <span class="font-heading font-black text-xl tracking-wider text-white uppercase group-hover:text-zinc-200 transition">JHONAL 80</span>
-          <span class="text-[10px] uppercase tracking-widest text-zinc-400 font-semibold">Holding Multimarca Textil</span>
+          <div class="flex items-center gap-2">
+            <span
+              class="font-heading font-black text-xl sm:text-2xl tracking-wider text-white uppercase group-hover:text-zinc-100 transition">JHONAL
+              <span class="text-rose-500">80</span></span>
+            <span
+              class="hidden sm:inline-flex px-2 py-0.5 rounded-full text-[9px] font-black bg-zinc-800 text-zinc-300 border border-zinc-700 shadow-sm tracking-widest uppercase">EST.
+              2007</span>
+          </div>
+          <span class="text-[10px] uppercase tracking-widest text-zinc-400 font-semibold flex items-center gap-1.5">
+            <span>Diseño exclusivo</span>
+            <span class="w-1 h-1 rounded-full bg-rose-500"></span>
+            <span class="text-zinc-300 font-bold">Ventas al por mayor</span>
+          </span>
         </div>
       </a>
 
       <!-- Desktop Navigation Links -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-300">
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-300">
         <a href="#marcas" class="hover:text-white transition hover:scale-105">Marcas</a>
-        <a href="#portafolio" class="hover:text-white transition hover:scale-105">Portafolio & Lookbook</a>
-        <a href="#distribuidores" class="hover:text-white transition hover:scale-105">Programa Distribuidores</a>
-        <a href="#catalogos" class="hover:text-white transition hover:scale-105">Catálogos 2026</a>
-        <a href="#cotizador" class="hover:text-white transition hover:scale-105">Cotizador B2B</a>
+        <a href="#nosotros" class="hover:text-white transition hover:scale-105">Nuestra fábrica</a>
+        <a href="#portafolio" class="hover:text-white transition hover:scale-105">Catálogo y fotos</a>
+        <a href="#distribuidores"
+          class="px-3.5 py-1.5 rounded-full bg-rose-500/15 border border-rose-500/30 text-rose-300 hover:bg-rose-500 hover:text-white font-bold transition flex items-center gap-1.5 shadow-sm">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          <span>Sé distribuidor</span>
+        </a>
+        <a href="#catalogos" class="hover:text-white transition hover:scale-105">Catálogos en PDF</a>
+        <a href="#cotizador" class="hover:text-white transition hover:scale-105">Pedir cotización</a>
       </nav>
 
       <!-- Action Button -->
       <div class="hidden lg:flex items-center gap-4">
-        <a :href="getGeneralWhatsAppLink()" target="_blank" class="flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-600 hover:bg-emerald-500 text-white transition-all shadow-lg shadow-emerald-900/30 hover:scale-105">
+        <a :href="getGeneralWhatsAppLink()" target="_blank"
+          class="flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-600 hover:bg-emerald-500 text-white transition-all shadow-lg shadow-emerald-900/30 hover:scale-105">
           <i data-lucide="message-circle" class="w-4 h-4"></i>
-          <span>WhatsApp Mayorista</span>
+          <span>WhatsApp mayorista</span>
         </a>
       </div>
 
       <!-- Mobile Menu Button -->
-      <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800">
+      <button @click="mobileMenuOpen = !mobileMenuOpen"
+        class="md:hidden p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800">
         <i data-lucide="menu" class="w-6 h-6" x-show="!mobileMenuOpen"></i>
         <i data-lucide="x" class="w-6 h-6" x-show="mobileMenuOpen"></i>
       </button>
     </div>
 
     <!-- Mobile Drawer -->
-    <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-zinc-950 border-b border-zinc-800 px-6 py-6 space-y-4">
-      <a @click="mobileMenuOpen = false" href="#marcas" class="block text-base font-medium text-zinc-300 hover:text-white">Nuestras Marcas</a>
-      <a @click="mobileMenuOpen = false" href="#portafolio" class="block text-base font-medium text-zinc-300 hover:text-white">Portafolio & Lookbook</a>
-      <a @click="mobileMenuOpen = false" href="#distribuidores" class="block text-base font-medium text-zinc-300 hover:text-white">Distribuidores Mayoristas</a>
-      <a @click="mobileMenuOpen = false" href="#catalogos" class="block text-base font-medium text-zinc-300 hover:text-white">Descargar Catálogos</a>
-      <a @click="mobileMenuOpen = false" href="#cotizador" class="block text-base font-medium text-zinc-300 hover:text-white">Cotizador B2B</a>
+    <div x-show="mobileMenuOpen" x-transition
+      class="md:hidden bg-zinc-950 border-b border-zinc-800 px-6 py-6 space-y-4">
+      <a @click="mobileMenuOpen = false" href="#marcas"
+        class="block text-base font-medium text-zinc-300 hover:text-white">Nuestras marcas</a>
+      <a @click="mobileMenuOpen = false" href="#nosotros"
+        class="block text-base font-medium text-zinc-300 hover:text-white">Nuestra fábrica y talleres</a>
+      <a @click="mobileMenuOpen = false" href="#portafolio"
+        class="block text-base font-medium text-zinc-300 hover:text-white">Catálogo y fotos</a>
+      <a @click="mobileMenuOpen = false" href="#distribuidores"
+        class="block text-base font-bold text-rose-400 hover:text-white flex items-center gap-2">
+        <i data-lucide="award" class="w-4 h-4"></i>
+        <span>Programa para distribuidores</span>
+      </a>
+      <a @click="mobileMenuOpen = false" href="#catalogos"
+        class="block text-base font-medium text-zinc-300 hover:text-white">Descargar catálogos en PDF</a>
+      <a @click="mobileMenuOpen = false" href="#cotizador"
+        class="block text-base font-medium text-zinc-300 hover:text-white">Pedir cotización rápida</a>
       <div class="pt-4">
-        <a :href="getGeneralWhatsAppLink()" target="_blank" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-600 text-white font-bold text-sm">
+        <a :href="getGeneralWhatsAppLink()" target="_blank"
+          class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-600 text-white font-bold text-sm">
           <i data-lucide="message-circle" class="w-4 h-4"></i>
-          WhatsApp Comercial
+          WhatsApp comercial
         </a>
       </div>
     </div>
@@ -262,52 +324,84 @@
   <section class="relative pt-12 pb-24 md:pt-20 md:pb-32 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="text-center max-w-4xl mx-auto space-y-6">
-        
-        <!-- Badge -->
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-800/80 border border-zinc-700/80 text-zinc-300 text-xs font-medium backdrop-blur-md">
+
+        <!-- Sello Heritage Búho + Badge -->
+        <div
+          class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-zinc-900/90 border border-zinc-700/80 text-zinc-200 text-xs font-semibold backdrop-blur-md shadow-xl">
+          <img src="Buho jhonal.png" alt="Sello Búho" class="w-5 h-5 object-contain rounded-full">
+          <span>Confección y diseño 100% colombiano • Desde 2007</span>
           <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
-          <span>Industria y Confección Colombiana de Alto Rendimiento</span>
         </div>
 
         <!-- Main Title -->
         <h1 class="font-heading font-extrabold text-4xl sm:text-6xl lg:text-7xl tracking-tight leading-[1.1]">
-          El Holding Textil que Impulsa tu Negocio con <span class="gradient-text">4 Marcas Líderes</span>
+          La fábrica de ropa que impulsa las ventas de tu <span class="gradient-text">negocio o tienda</span>
         </h1>
 
         <!-- Subtitle -->
-        <p class="text-base sm:text-xl text-zinc-400 font-normal max-w-2xl mx-auto leading-relaxed">
-          Especialistas en confección y comercialización mayorista de camisetas licradas, polos y conjuntos de <span class="text-zinc-200 font-semibold">alta rotación</span> con nuestras marcas: <span class="text-white font-semibold">Fénix, Romper, Jhonal y Lady's</span>.
+        <p class="text-base sm:text-xl text-zinc-300 font-normal max-w-3xl mx-auto leading-relaxed">
+          Surtimos a distribuidores, almacenes y mayoristas en toda Colombia con camisetas licradas, polos y conjuntos
+          de <span class="text-white font-bold underline decoration-rose-500">alta rotación a precios directos de
+            fábrica</span> en nuestras 4 marcas: <strong class="text-white">Romper, Jhonal, Fénix y Lady's</strong>.
         </p>
 
-        <!-- CTA Buttons -->
+        <!-- CTA Buttons (Foco Distribuidor) -->
         <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
-          <a href="#marcas" class="px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider bg-gradient-to-r from-rose-600 to-rose-700 hover:from-rose-500 hover:to-rose-600 text-white shadow-xl shadow-rose-950/50 hover:scale-105 transition-all flex items-center gap-2">
-            <span>Explorar Nuestras Marcas</span>
+          <a href="#distribuidores"
+            class="px-8 py-4 rounded-full font-extrabold text-sm uppercase tracking-wider bg-gradient-to-r from-rose-600 to-rose-700 hover:from-rose-500 hover:to-rose-600 text-white shadow-2xl shadow-rose-950/80 hover:scale-105 transition-all flex items-center gap-2.5 border border-rose-400/30">
+            <i data-lucide="handshake" class="w-5 h-5"></i>
+            <span>Quiero ser distribuidor oficial</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
-          <a href="#distribuidores" class="px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700/80 hover:border-zinc-500 hover:scale-105 transition-all flex items-center gap-2">
-            <i data-lucide="briefcase" class="w-4 h-4 text-zinc-400"></i>
-            <span>Programa Distribuidor</span>
+          <a href="#marcas"
+            class="px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider bg-zinc-900/90 hover:bg-zinc-800 text-zinc-200 border border-zinc-700 hover:border-zinc-500 hover:scale-105 transition-all flex items-center gap-2">
+            <i data-lucide="grid" class="w-4 h-4 text-zinc-400"></i>
+            <span>Ver las 4 marcas</span>
           </a>
         </div>
 
-        <!-- Trust Stats Bar -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-16 max-w-4xl mx-auto">
-          <div class="p-4 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 backdrop-blur-sm">
-            <div class="font-heading font-bold text-2xl sm:text-3xl text-white">4 Marcas</div>
-            <div class="text-xs text-zinc-400 mt-1">Especializadas por segmento</div>
+        <!-- Distributor Pillars Quick Cards -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-10 max-w-5xl mx-auto text-left">
+          <div
+            class="p-4 rounded-2xl bg-zinc-900/70 border border-zinc-800/90 backdrop-blur-md flex items-start gap-3 hover:border-rose-500/40 transition">
+            <div class="w-9 h-9 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0">
+              <i data-lucide="badge-percent" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="font-heading font-bold text-sm text-white">Precios de fábrica</div>
+              <div class="text-[11px] text-zinc-400">Ganas más sin intermediarios</div>
+            </div>
           </div>
-          <div class="p-4 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 backdrop-blur-sm">
-            <div class="font-heading font-bold text-2xl sm:text-3xl text-rose-500">100% Calidad</div>
-            <div class="text-xs text-zinc-400 mt-1">Algodón licrado y tela fría</div>
+          <div
+            class="p-4 rounded-2xl bg-zinc-900/70 border border-zinc-800/90 backdrop-blur-md flex items-start gap-3 hover:border-blue-500/40 transition">
+            <div class="w-9 h-9 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0">
+              <i data-lucide="truck" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="font-heading font-bold text-sm text-white">Envíos a toda Colombia</div>
+              <div class="text-[11px] text-zinc-400">Despachos rápidos y seguros</div>
+            </div>
           </div>
-          <div class="p-4 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 backdrop-blur-sm">
-            <div class="font-heading font-bold text-2xl sm:text-3xl text-white">B2B Foco</div>
-            <div class="text-xs text-zinc-400 mt-1">Acompañamiento comercial</div>
+          <div
+            class="p-4 rounded-2xl bg-zinc-900/70 border border-zinc-800/90 backdrop-blur-md flex items-start gap-3 hover:border-amber-500/40 transition">
+            <div class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+              <i data-lucide="layers" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="font-heading font-bold text-sm text-white">4 marcas en una compra</div>
+              <div class="text-[11px] text-zinc-400">Surtido para todo tipo de cliente</div>
+            </div>
           </div>
-          <div class="p-4 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 backdrop-blur-sm">
-            <div class="font-heading font-bold text-2xl sm:text-3xl text-emerald-400">Envíos</div>
-            <div class="text-xs text-zinc-400 mt-1">Cobertura en todo Colombia</div>
+          <div
+            class="p-4 rounded-2xl bg-zinc-900/70 border border-zinc-800/90 backdrop-blur-md flex items-start gap-3 hover:border-emerald-500/40 transition">
+            <div
+              class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+              <i data-lucide="award" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="font-heading font-bold text-sm text-white">Acompañamiento real</div>
+              <div class="text-[11px] text-zinc-400">Te ayudamos a vender más</div>
+            </div>
           </div>
         </div>
 
@@ -315,109 +409,147 @@
     </div>
   </section>
 
-  <!-- MARCAS / 4 BRAND UNIVERSES SELECTOR (60 FPS INTERACTIVE) -->
+  <!-- MARCAS / 4 BRAND UNIVERSES SELECTOR -->
   <section id="marcas" class="py-20 bg-zinc-950/60 relative border-t border-b border-zinc-800/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
+
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-        <span class="text-xs font-bold uppercase tracking-widest text-rose-500">Ecosistema Multimarca</span>
-        <h2 class="font-heading font-extrabold text-3xl sm:text-5xl text-white">Universo de Marcas Jhonal 80</h2>
+        <span class="text-xs font-bold uppercase tracking-widest text-rose-500">Nuestras 4 marcas</span>
+        <h2 class="font-heading font-extrabold text-3xl sm:text-5xl text-white">Ropa pensada para rotar y vender todos
+          los días</h2>
         <p class="text-zinc-400 text-sm sm:text-base">
-          Cada línea ha sido diseñada para conquistar un nicho específico del mercado textil con alta rotación y confección impecable.
+          Cada marca tiene su propio estilo para que puedas ofrecerle a tus clientes justo lo que están buscando, con
+          excelente confección y telas garantizadas.
         </p>
       </div>
 
       <!-- 4 Brands Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        
+
         <!-- Brand 1: ROMPER -->
-        <div class="glass-card rounded-3xl p-6 relative overflow-hidden group border border-orange-500/20 hover:border-orange-500/60">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl group-hover:bg-orange-500/20 transition-all"></div>
+        <div
+          class="glass-card rounded-3xl p-6 relative overflow-hidden group border border-orange-500/20 hover:border-orange-500/60">
+          <div
+            class="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl group-hover:bg-orange-500/20 transition-all">
+          </div>
           <div class="flex items-center justify-between mb-6">
-            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-orange-500/20 text-orange-400 border border-orange-500/30">
-              Streetwear & Athleisure
+            <span
+              class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-orange-500/20 text-orange-400 border border-orange-500/30">
+              Streetwear y deportivo
             </span>
             <i data-lucide="sparkles" class="w-5 h-5 text-orange-400"></i>
           </div>
-          <h3 class="font-heading font-black text-2xl text-white group-hover:text-orange-400 transition-colors">ROMPER</h3>
+          <h3 class="font-heading font-black text-2xl text-white group-hover:text-orange-400 transition-colors">ROMPER
+          </h3>
           <p class="text-xs text-zinc-400 mt-2 line-clamp-3">
-            Conjuntos casuales, camisetas en tela fría 96% algodón con 4% spandex, polos deportivos y línea infantil Romper Kids.
+            Conjuntos casuales, camisetas en tela fría 96% algodón con 4% spandex, polos deportivos y línea infantil
+            Romper Kids.
           </p>
           <div class="my-4 p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 text-[11px] text-zinc-300 space-y-1">
-            <div class="flex justify-between font-mono"><span>Ref. Estrella:</span> <strong class="text-white">6016 / 6005</strong></div>
-            <div class="flex justify-between font-mono"><span>Tecnología:</span> <span class="text-orange-300">Tela Fría Spandex</span></div>
+            <div class="flex justify-between font-mono"><span>Ref. más pedidas:</span> <strong class="text-white">6016 /
+                6005</strong></div>
+            <div class="flex justify-between font-mono"><span>Tipo de tela:</span> <span class="text-orange-300">Tela
+                fría con spandex</span></div>
           </div>
-          <button @click="filterByBrand('Romper')" class="w-full mt-2 py-2.5 rounded-xl bg-orange-500/10 hover:bg-orange-500 text-orange-300 hover:text-white font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
-            <span>Ver Colección Romper</span>
+          <button @click="filterByBrand('Romper')"
+            class="w-full mt-2 py-2.5 rounded-xl bg-orange-500/10 hover:bg-orange-500 text-orange-300 hover:text-white font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+            <span>Ver prendas Romper</span>
             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
           </button>
         </div>
 
         <!-- Brand 2: JHONAL -->
-        <div class="glass-card rounded-3xl p-6 relative overflow-hidden group border border-blue-500/20 hover:border-blue-500/60">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all"></div>
+        <div
+          class="glass-card rounded-3xl p-6 relative overflow-hidden group border border-blue-500/20 hover:border-blue-500/60">
+          <div
+            class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all">
+          </div>
           <div class="flex items-center justify-between mb-6">
-            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-blue-500/20 text-blue-400 border border-blue-500/30">
-              Clásico & Urbano
+            <span
+              class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-blue-500/20 text-blue-400 border border-blue-500/30">
+              Clásicos y urbanos
             </span>
             <i data-lucide="shield-check" class="w-5 h-5 text-blue-400"></i>
           </div>
-          <h3 class="font-heading font-black text-2xl text-white group-hover:text-blue-400 transition-colors">JHONAL</h3>
+          <h3 class="font-heading font-black text-2xl text-white group-hover:text-blue-400 transition-colors">JHONAL
+          </h3>
           <p class="text-xs text-zinc-400 mt-2 line-clamp-3">
-            La línea insignia para el hombre contemporáneo: camisetas cuello redondo en algodón licrado de ajuste premium y polos elegantes.
+            La línea preferida para hombre: camisetas cuello redondo en algodón licrado de ajuste impecable y polos con
+            estilo.
           </p>
           <div class="my-4 p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 text-[11px] text-zinc-300 space-y-1">
-            <div class="flex justify-between font-mono"><span>Ref. Estrella:</span> <strong class="text-white">6001-00 al 05</strong></div>
-            <div class="flex justify-between font-mono"><span>Tecnología:</span> <span class="text-blue-300">Algodón Licrado</span></div>
+            <div class="flex justify-between font-mono"><span>Ref. más pedidas:</span> <strong
+                class="text-white">6001-00 al 05</strong></div>
+            <div class="flex justify-between font-mono"><span>Tipo de tela:</span> <span class="text-blue-300">Algodón
+                licrado premium</span></div>
           </div>
-          <button @click="filterByBrand('Jhonal')" class="w-full mt-2 py-2.5 rounded-xl bg-blue-500/10 hover:bg-blue-500 text-blue-300 hover:text-white font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
-            <span>Ver Colección Jhonal</span>
+          <button @click="filterByBrand('Jhonal')"
+            class="w-full mt-2 py-2.5 rounded-xl bg-blue-500/10 hover:bg-blue-500 text-blue-300 hover:text-white font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+            <span>Ver prendas Jhonal</span>
             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
           </button>
         </div>
 
         <!-- Brand 3: FÉNIX -->
-        <div class="glass-card rounded-3xl p-6 relative overflow-hidden group border border-amber-500/20 hover:border-amber-500/60">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl group-hover:bg-amber-500/20 transition-all"></div>
+        <div
+          class="glass-card rounded-3xl p-6 relative overflow-hidden group border border-amber-500/20 hover:border-amber-500/60">
+          <div
+            class="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl group-hover:bg-amber-500/20 transition-all">
+          </div>
           <div class="flex items-center justify-between mb-6">
-            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/30">
-              Vanguardia & Oversize
+            <span
+              class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/30">
+              Oversize y moda urbana
             </span>
             <i data-lucide="flame" class="w-5 h-5 text-amber-400"></i>
           </div>
-          <h3 class="font-heading font-black text-2xl text-white group-hover:text-amber-400 transition-colors">FÉNIX</h3>
+          <h3 class="font-heading font-black text-2xl text-white group-hover:text-amber-400 transition-colors">FÉNIX
+          </h3>
           <p class="text-xs text-zinc-400 mt-2 line-clamp-3">
-            Siluetas oversize en tendencia, prendas de alto gramaje, líneas unisex y la colección Fénix Dama para el público que busca moda vanguardista.
+            Siluetas oversize en tendencia, prendas con excelente peso, diseños unisex y la colección Fénix Dama para
+            quienes buscan moda moderna.
           </p>
           <div class="my-4 p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 text-[11px] text-zinc-300 space-y-1">
-            <div class="flex justify-between font-mono"><span>Líneas:</span> <strong class="text-white">Oversize & Dama</strong></div>
-            <div class="flex justify-between font-mono"><span>Estilo:</span> <span class="text-amber-300">Cortes Modernos</span></div>
+            <div class="flex justify-between font-mono"><span>Líneas:</span> <strong class="text-white">Oversize y
+                dama</strong></div>
+            <div class="flex justify-between font-mono"><span>Estilo:</span> <span class="text-amber-300">Cortes
+                modernos y holgados</span></div>
           </div>
-          <button @click="filterByBrand('Fénix')" class="w-full mt-2 py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-300 hover:text-white font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
-            <span>Ver Colección Fénix</span>
+          <button @click="filterByBrand('Fénix')"
+            class="w-full mt-2 py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-300 hover:text-white font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+            <span>Ver prendas Fénix</span>
             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
           </button>
         </div>
 
         <!-- Brand 4: LADY'S -->
-        <div class="glass-card rounded-3xl p-6 relative overflow-hidden group border border-pink-500/20 hover:border-pink-500/60">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-pink-500/10 rounded-full blur-2xl group-hover:bg-pink-500/20 transition-all"></div>
+        <div
+          class="glass-card rounded-3xl p-6 relative overflow-hidden group border border-pink-500/20 hover:border-pink-500/60">
+          <div
+            class="absolute top-0 right-0 w-32 h-32 bg-pink-500/10 rounded-full blur-2xl group-hover:bg-pink-500/20 transition-all">
+          </div>
           <div class="flex items-center justify-between mb-6">
-            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-pink-500/20 text-pink-400 border border-pink-500/30">
-              Ropa Femenina & Confort
+            <span
+              class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-pink-500/20 text-pink-400 border border-pink-500/30">
+              Ropa femenina y cómoda
             </span>
             <i data-lucide="heart" class="w-5 h-5 text-pink-400"></i>
           </div>
-          <h3 class="font-heading font-black text-2xl text-white group-hover:text-pink-400 transition-colors">LADY'S</h3>
+          <h3 class="font-heading font-black text-2xl text-white group-hover:text-pink-400 transition-colors">LADY'S
+          </h3>
           <p class="text-xs text-zinc-400 mt-2 line-clamp-3">
-            Diseños creados exclusivamente para la mujer: siluetas estilizadas, telas ultrasuaves, básicos indispensables y prendas de gran adaptabilidad.
+            Diseños creados exclusivamente para la mujer: siluetas estilizadas, telas ultrasuaves, básicos
+            indispensables y prendas fáciles de combinar.
           </p>
           <div class="my-4 p-3 rounded-xl bg-zinc-900/60 border border-zinc-800 text-[11px] text-zinc-300 space-y-1">
-            <div class="flex justify-between font-mono"><span>Enfoque:</span> <strong class="text-white">Ropa Femenina</strong></div>
-            <div class="flex justify-between font-mono"><span>Tacto:</span> <span class="text-pink-300">Suavidad & Confort</span></div>
+            <div class="flex justify-between font-mono"><span>Enfoque:</span> <strong class="text-white">Moda
+                femenina</strong></div>
+            <div class="flex justify-between font-mono"><span>Sensación:</span> <span class="text-pink-300">Suavidad y
+                frescura</span></div>
           </div>
-          <button @click="filterByBrand('Ladys')" class="w-full mt-2 py-2.5 rounded-xl bg-pink-500/10 hover:bg-pink-500 text-pink-300 hover:text-white font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
-            <span>Ver Colección Lady's</span>
+          <button @click="filterByBrand('Ladys')"
+            class="w-full mt-2 py-2.5 rounded-xl bg-pink-500/10 hover:bg-pink-500 text-pink-300 hover:text-white font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+            <span>Ver prendas Lady's</span>
             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
           </button>
         </div>
@@ -427,69 +559,230 @@
     </div>
   </section>
 
-  <!-- PORTAFOLIO & LOOKBOOK INTERACTIVO (EXTRACTED CATALOG REFERENCES) -->
+  <!-- NUESTRA FÁBRICA / QUIÉNES SOMOS & PLANTA FÍSICA -->
+  <section id="nosotros"
+    class="py-24 bg-gradient-to-b from-zinc-950 via-zinc-900/90 to-zinc-950 relative border-t border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+        <!-- Left: Story & Trust Metrics -->
+        <div class="lg:col-span-6 space-y-6">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-rose-500/10 text-rose-400 border border-rose-500/20">
+            <i data-lucide="factory" class="w-3.5 h-3.5"></i>
+            <span>Nuestra fábrica y talleres</span>
+          </div>
+
+          <h2 class="font-heading font-extrabold text-3xl sm:text-5xl text-white leading-tight">
+            Más de 17 años vistiendo a Colombia con <span class="gradient-text">confección de verdad</span>
+          </h2>
+
+          <p class="text-zinc-300 text-sm sm:text-base leading-relaxed">
+            En <strong>Jhonal 80</strong> nacimos en 2007 con un objetivo muy claro: fabricar ropa con excelente horma,
+            telas garantizadas y diseños que realmente roten rápido en los mostradores.
+          </p>
+
+          <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+            Contamos con planta física propia, talleres de estampado en serigrafía, mesas de corte y un equipo humano
+            calificado. No somos intermediarios: controlamos todo el proceso desde el corte de la tela hasta el empaque
+            final para entregarte calidad constante y precios directos de fábrica.
+          </p>
+
+          <!-- 3 Value Metric Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+            <div class="p-4 rounded-2xl bg-zinc-900/90 border border-zinc-800/80">
+              <div class="font-heading font-black text-2xl text-rose-500">+17 años</div>
+              <div class="text-xs font-bold text-white mt-1">Experiencia</div>
+              <div class="text-[11px] text-zinc-400 mt-0.5">Tradición y solidez en el mercado textil</div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-zinc-900/90 border border-zinc-800/80">
+              <div class="font-heading font-black text-2xl text-blue-500">100%</div>
+              <div class="text-xs font-bold text-white mt-1">Hecho en Colombia</div>
+              <div class="text-[11px] text-zinc-400 mt-0.5">Mano de obra y confección nacional</div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-zinc-900/90 border border-zinc-800/80">
+              <div class="font-heading font-black text-2xl text-emerald-500">Directo</div>
+              <div class="text-xs font-bold text-white mt-1">De fábrica</div>
+              <div class="text-[11px] text-zinc-400 mt-0.5">Sin sobrecostos ni terceros</div>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="#distribuidores"
+              class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white text-zinc-950 hover:bg-zinc-200 font-bold text-xs uppercase tracking-wider transition shadow-xl">
+              <span>Trabaja con nosotros</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Plant Photos & Video Showcase -->
+        <div class="lg:col-span-6 space-y-4">
+
+          <!-- Photo 1: Serigrafía y Corte Table (Main Featured Box) -->
+          <div class="relative rounded-3xl overflow-hidden border border-zinc-700/80 shadow-2xl group bg-zinc-950">
+            <div class="h-64 sm:h-72 w-full overflow-hidden relative">
+              <img src="WhatsApp Image 2026-09-18 at 3.55.53 PM.jpeg" alt="Planta física Jhonal 80 - Serigrafía y Corte"
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 filter brightness-90 contrast-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/30 to-transparent"></div>
+
+              <!-- Floating Overlay Tags -->
+              <div class="absolute top-4 left-4">
+                <span
+                  class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-black/80 backdrop-blur-md text-white border border-white/20 shadow-lg flex items-center gap-1.5">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-400"></i>
+                  <span>Planta física activa</span>
+                </span>
+              </div>
+
+              <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+                <div>
+                  <h4 class="font-heading font-bold text-white text-base drop-shadow-md">Talleres de serigrafía y
+                    estampado</h4>
+                  <p class="text-xs text-zinc-300 drop-shadow-md">Pulpos de impresión textil y mesas de corte de alto
+                    volumen</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Grid: Photo 2 & Video Container -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+            <!-- Photo 2: Confección y almacenamiento -->
+            <div class="relative rounded-2xl overflow-hidden border border-zinc-800 shadow-xl group bg-zinc-950 h-48">
+              <img src="WhatsApp Image 2026-09-18 at 3.55.54 PM.jpeg" alt="Talleres de Confección Jhonal 80"
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 filter brightness-90">
+              <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-black/30"></div>
+              <div class="absolute bottom-3 left-3 right-3">
+                <span class="text-[11px] font-bold text-white block drop-shadow-md">Área de confección y empaque</span>
+                <span class="text-[10px] text-zinc-300 drop-shadow-md">Revisión prenda por prenda</span>
+              </div>
+            </div>
+
+            <!-- Video 1: Real Production Video Preview -->
+            <div
+              class="relative rounded-2xl overflow-hidden border border-zinc-800 shadow-xl bg-zinc-950 h-48 flex items-center justify-center">
+              <video class="w-full h-full object-cover" controls preload="metadata"
+                poster="WhatsApp Image 2026-09-18 at 3.55.54 PM.jpeg">
+                <source src="WhatsApp Video 2026-09-18 at 3.55.54 PM.mp4" type="video/mp4">
+                Tu navegador no soporta reproducción de video.
+              </video>
+              <div class="absolute top-2 right-2 pointer-events-none">
+                <span
+                  class="px-2 py-0.5 rounded text-[9px] font-mono font-bold bg-rose-600/90 text-white shadow-md">Vídeo</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PORTAFOLIO & LOOKBOOK INTERACTIVO (CON FOTOS REALES) -->
   <section id="portafolio" class="py-24 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
+
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
         <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-rose-500">Lookbook Digital 2026</span>
-          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white mt-1">Referencias Destacadas de Catálogo</h2>
+          <span class="text-xs font-bold uppercase tracking-widest text-rose-500">Fotos de catálogo 2026</span>
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white mt-1">Prendas destacadas para surtir tu
+            negocio</h2>
           <p class="text-zinc-400 text-xs sm:text-sm mt-2 max-w-xl">
-            Haz clic en cualquier prenda para ver su ficha técnica detallada o solicitar cotización directa por WhatsApp con el código de referencia.
+            Mira algunos de nuestros modelos más vendidos. Puedes pedir cotización directa por WhatsApp con la
+            referencia que te guste para darte disponibilidad de colores y precios al por mayor.
           </p>
         </div>
 
         <!-- Filter Tabs -->
         <div class="flex flex-wrap gap-2 p-1.5 rounded-2xl bg-zinc-900 border border-zinc-800">
-          <button @click="activeFilter = 'all'" :class="activeFilter === 'all' ? 'bg-white text-zinc-900 font-bold' : 'text-zinc-400 hover:text-white'" class="px-4 py-2 rounded-xl text-xs transition">Todas</button>
-          <button @click="activeFilter = 'Romper'" :class="activeFilter === 'Romper' ? 'bg-orange-500 text-white font-bold' : 'text-zinc-400 hover:text-orange-400'" class="px-4 py-2 rounded-xl text-xs transition">Romper</button>
-          <button @click="activeFilter = 'Jhonal'" :class="activeFilter === 'Jhonal' ? 'bg-blue-600 text-white font-bold' : 'text-zinc-400 hover:text-blue-400'" class="px-4 py-2 rounded-xl text-xs transition">Jhonal</button>
-          <button @click="activeFilter = 'Fénix'" :class="activeFilter === 'Fénix' ? 'bg-amber-600 text-white font-bold' : 'text-zinc-400 hover:text-amber-400'" class="px-4 py-2 rounded-xl text-xs transition">Fénix</button>
-          <button @click="activeFilter = 'Ladys'" :class="activeFilter === 'Ladys' ? 'bg-pink-600 text-white font-bold' : 'text-zinc-400 hover:text-pink-400'" class="px-4 py-2 rounded-xl text-xs transition">Lady's</button>
+          <button @click="activeFilter = 'all'"
+            :class="activeFilter === 'all' ? 'bg-white text-zinc-900 font-bold' : 'text-zinc-400 hover:text-white'"
+            class="px-4 py-2 rounded-xl text-xs transition">Todas las marcas</button>
+          <button @click="activeFilter = 'Romper'"
+            :class="activeFilter === 'Romper' ? 'bg-orange-500 text-white font-bold' : 'text-zinc-400 hover:text-orange-400'"
+            class="px-4 py-2 rounded-xl text-xs transition">Romper</button>
+          <button @click="activeFilter = 'Jhonal'"
+            :class="activeFilter === 'Jhonal' ? 'bg-blue-600 text-white font-bold' : 'text-zinc-400 hover:text-blue-400'"
+            class="px-4 py-2 rounded-xl text-xs transition">Jhonal</button>
+          <button @click="activeFilter = 'Fénix'"
+            :class="activeFilter === 'Fénix' ? 'bg-amber-600 text-white font-bold' : 'text-zinc-400 hover:text-amber-400'"
+            class="px-4 py-2 rounded-xl text-xs transition">Fénix</button>
+          <button @click="activeFilter = 'Ladys'"
+            :class="activeFilter === 'Ladys' ? 'bg-pink-600 text-white font-bold' : 'text-zinc-400 hover:text-pink-400'"
+            class="px-4 py-2 rounded-xl text-xs transition">Lady's</button>
         </div>
       </div>
 
       <!-- Products Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         <template x-for="item in filteredProducts" :key="item.id">
-          <div class="glass-card rounded-2xl overflow-hidden group flex flex-col justify-between">
+          <div
+            class="glass-card rounded-2xl overflow-hidden group flex flex-col justify-between border border-zinc-800 hover:border-zinc-600 transition-all">
             <div>
-              <!-- Visual Card Header & Badge -->
-              <div class="relative h-64 bg-gradient-to-b from-zinc-800 to-zinc-950 flex items-center justify-center p-4 overflow-hidden">
-                
-                <div class="w-full h-full rounded-xl bg-zinc-900/80 border border-zinc-800 flex flex-col items-center justify-center text-center p-4 relative group-hover:scale-105 transition-transform duration-500">
-                  <div :class="getBrandBadgeColor(item.brand)" class="w-16 h-16 rounded-full flex items-center justify-center font-heading font-black text-xl mb-2 shadow-lg">
-                    <span x-text="item.brand.substring(0,2).toUpperCase()"></span>
-                  </div>
-                  <span class="text-xs font-mono font-bold text-zinc-300 tracking-wider" x-text="item.ref"></span>
-                  <span class="text-[11px] text-zinc-400 mt-1" x-text="item.subtitle"></span>
+              <!-- Real Product Image Display -->
+              <div class="relative h-72 bg-zinc-900 overflow-hidden flex items-center justify-center">
 
-                  <!-- Multi-color Pill Swatches -->
-                  <div class="flex items-center gap-1.5 mt-3">
-                    <template x-for="color in item.colors" :key="color">
-                      <span class="w-3.5 h-3.5 rounded-full border border-zinc-700 shadow-sm" :style="`background-color: ${color}`"></span>
-                    </template>
-                  </div>
+                <!-- Fallback background when loading -->
+                <div class="absolute inset-0 bg-zinc-900 flex items-center justify-center text-zinc-700">
+                  <i data-lucide="image" class="w-8 h-8"></i>
+                </div>
+
+                <!-- Product Image -->
+                <img :src="item.image" :alt="item.title"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 relative z-10">
+
+                <!-- Subtle Gradient Overlay -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-black/30 z-10 pointer-events-none">
                 </div>
 
                 <!-- Brand Tag Badge -->
-                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider bg-black/60 backdrop-blur-md text-white border border-white/10" x-text="item.brand"></span>
-                <span class="absolute top-3 right-3 px-2 py-0.5 rounded-md text-[9px] font-mono font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/30">Catálogo 2026</span>
+                <span
+                  class="absolute top-3 left-3 z-20 px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase tracking-wider bg-black/75 backdrop-blur-md text-white border border-white/20 shadow-md"
+                  x-text="item.brand"></span>
+                <span
+                  class="absolute top-3 right-3 z-20 px-2 py-0.5 rounded-md text-[9px] font-mono font-bold bg-rose-600/90 text-white shadow-md">Catálogo
+                  2026</span>
+
+                <!-- Bottom Image Bar (Ref & Colors) -->
+                <div
+                  class="absolute bottom-3 left-3 right-3 z-20 flex items-center justify-between pointer-events-none">
+                  <span
+                    class="px-2 py-0.5 rounded-md text-[10px] font-mono font-bold bg-black/80 text-zinc-200 border border-white/10 backdrop-blur-md"
+                    x-text="item.ref"></span>
+                  <div
+                    class="flex items-center gap-1 bg-black/70 px-2 py-1 rounded-full backdrop-blur-md border border-white/10">
+                    <template x-for="color in item.colors" :key="color">
+                      <span class="w-2.5 h-2.5 rounded-full border border-white/40 shadow-sm"
+                        :style="`background-color: ${color}`"></span>
+                    </template>
+                  </div>
+                </div>
               </div>
 
               <!-- Product Details -->
               <div class="p-5">
                 <div class="text-[11px] font-mono text-zinc-400 uppercase tracking-wider" x-text="item.category"></div>
-                <h4 class="font-heading font-bold text-base text-white mt-1 group-hover:text-rose-400 transition" x-text="item.title"></h4>
-                
-                <div class="mt-3 text-xs text-zinc-400 space-y-1.5 bg-zinc-900/60 p-3 rounded-xl border border-zinc-800/80">
+                <h4 class="font-heading font-bold text-base text-white mt-1 group-hover:text-rose-400 transition"
+                  x-text="item.title"></h4>
+                <p class="text-xs text-zinc-400 mt-0.5" x-text="item.subtitle"></p>
+
+                <div
+                  class="mt-3 text-xs text-zinc-400 space-y-1.5 bg-zinc-900/80 p-3 rounded-xl border border-zinc-800/80">
                   <div class="flex justify-between">
-                    <span class="text-zinc-500">Composición:</span>
-                    <strong class="text-zinc-200" x-text="item.composition"></strong>
+                    <span class="text-zinc-500">Tela:</span>
+                    <strong class="text-zinc-200 font-semibold" x-text="item.composition"></strong>
                   </div>
                   <div class="flex justify-between">
-                    <span class="text-zinc-500">Tipo:</span>
+                    <span class="text-zinc-500">Estilo:</span>
                     <span class="text-zinc-300" x-text="item.fit"></span>
                   </div>
                 </div>
@@ -498,9 +791,10 @@
 
             <!-- Action Button -->
             <div class="p-5 pt-0">
-              <a :href="getWhatsAppProductLink(item)" target="_blank" class="w-full py-2.5 px-4 rounded-xl font-bold text-xs uppercase tracking-wider bg-zinc-800 hover:bg-emerald-600 text-zinc-200 hover:text-white transition-all flex items-center justify-center gap-2 group/btn shadow-md">
+              <a :href="getWhatsAppProductLink(item)" target="_blank"
+                class="w-full py-2.5 px-4 rounded-xl font-bold text-xs uppercase tracking-wider bg-zinc-800 hover:bg-emerald-600 text-zinc-200 hover:text-white transition-all flex items-center justify-center gap-2 group/btn shadow-md">
                 <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400 group-hover/btn:text-white"></i>
-                <span>Cotizar Ref. WhatsApp</span>
+                <span>Cotizar por WhatsApp</span>
               </a>
             </div>
           </div>
@@ -510,26 +804,31 @@
     </div>
   </section>
 
-  <!-- PROGRAMA DISTRIBUIDORES JHONAL 80 (B2B VALUE PROPOSITION) -->
-  <section id="distribuidores" class="py-24 bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950 relative border-t border-zinc-800">
+  <!-- PROGRAMA DISTRIBUIDORES JHONAL 80 (ENFOQUE COMERCIAL DIRECTO) -->
+  <section id="distribuidores"
+    class="py-24 bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950 relative border-t border-zinc-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
+
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
+
         <!-- Left Column: Copy & Value -->
         <div class="lg:col-span-5 space-y-6">
-          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-rose-500/10 text-rose-400 border border-rose-500/20">
-            Alianza Comercial B2B
+          <span
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-rose-500/10 text-rose-400 border border-rose-500/20">
+            Gana con nosotros
           </span>
           <h2 class="font-heading font-extrabold text-3xl sm:text-5xl text-white leading-tight">
-            Conviértete en Distribuidor <span class="text-rose-500">Jhonal 80</span>
+            Conviértete en distribuidor de <span class="text-rose-500">Jhonal 80</span>
           </h2>
-          <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
-            Ser distribuidor de Jhonal 80 significa mucho más que acceder a un portafolio de marcas y productos. Significa contar con un <strong class="text-white">aliado comercial estratégico</strong> que te acompaña para vender más, desarrollar tus clientes y fortalecer a tu equipo comercial.
+          <p class="text-zinc-300 text-sm sm:text-base leading-relaxed">
+            Ser distribuidor de Jhonal 80 es muy fácil y rentable. No solo compras ropa con precio directo de fábrica,
+            también cuentas con nuestro <strong class="text-white">respaldo comercial continuo</strong> para que tu
+            negocio crezca, exhibas mejor tus prendas y vendas todos los días.
           </p>
           <div class="pt-2">
-            <a href="#cotizador" class="inline-flex items-center gap-3 px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider bg-white text-zinc-950 hover:bg-zinc-200 transition shadow-xl">
-              <span>Solicitar Registro de Distribuidor</span>
+            <a href="#cotizador"
+              class="inline-flex items-center gap-3 px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider bg-white text-zinc-950 hover:bg-zinc-200 transition shadow-xl">
+              <span>Quiero registrarme como distribuidor</span>
               <i data-lucide="chevron-right" class="w-4 h-4"></i>
             </a>
           </div>
@@ -537,76 +836,139 @@
 
         <!-- Right Column: The 7 Pillars Grid -->
         <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          
+
           <div class="p-5 rounded-2xl bg-zinc-900/80 border border-zinc-800 hover:border-zinc-700 transition">
             <div class="w-10 h-10 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center mb-3">
               <i data-lucide="target" class="w-5 h-5"></i>
             </div>
-            <h4 class="font-heading font-bold text-white text-sm">Impulso a Clientes Foco</h4>
-            <p class="text-xs text-zinc-400 mt-1.5">Trabajamos contigo en el desarrollo de clientes estratégicos para generar mayor crecimiento y rotación.</p>
+            <h4 class="font-heading font-bold text-white text-sm">Prendas que más rotan</h4>
+            <p class="text-xs text-zinc-400 mt-1.5">Te orientamos sobre qué prendas y tallas se venden más en tu zona
+              para que tu dinero rinda al máximo.</p>
           </div>
 
           <div class="p-5 rounded-2xl bg-zinc-900/80 border border-zinc-800 hover:border-zinc-700 transition">
             <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center mb-3">
               <i data-lucide="store" class="w-5 h-5"></i>
             </div>
-            <h4 class="font-heading font-bold text-white text-sm">Estrategias de Exhibición</h4>
-            <p class="text-xs text-zinc-400 mt-1.5">Acompañamiento para fortalecer la presentación de productos en los puntos de venta de tus clientes.</p>
+            <h4 class="font-heading font-bold text-white text-sm">Ayuda para tu exhibición</h4>
+            <p class="text-xs text-zinc-400 mt-1.5">Te damos ideas y apoyo visual para organizar tu vitrina y exhibir
+              las prendas de forma llamativa.</p>
           </div>
 
           <div class="p-5 rounded-2xl bg-zinc-900/80 border border-zinc-800 hover:border-zinc-700 transition">
             <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-3">
-              <i data-lucide="handshake" class="w-5 h-5"></i>
+              <i data-lucide="image" class="w-5 h-5"></i>
             </div>
-            <h4 class="font-heading font-bold text-white text-sm">Acciones de Cobranding</h4>
-            <p class="text-xs text-zinc-400 mt-1.5">Desarrollo conjunto de acciones de marca que potencien tu negocio y generen visibilidad.</p>
+            <h4 class="font-heading font-bold text-white text-sm">Fotos y material para redes</h4>
+            <p class="text-xs text-zinc-400 mt-1.5">Te compartimos fotos profesionales listas para que publiques en tus
+              redes y vendas a diario.</p>
           </div>
 
           <div class="p-5 rounded-2xl bg-zinc-900/80 border border-zinc-800 hover:border-zinc-700 transition">
             <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center mb-3">
               <i data-lucide="graduation-cap" class="w-5 h-5"></i>
             </div>
-            <h4 class="font-heading font-bold text-white text-sm">Capacitación de Equipos</h4>
-            <p class="text-xs text-zinc-400 mt-1.5">Fortalecemos a tu fuerza de ventas para que domine marcas, tipos de telas y argumentos clave.</p>
+            <h4 class="font-heading font-bold text-white text-sm">Asesoría en tipos de tela</h4>
+            <p class="text-xs text-zinc-400 mt-1.5">Te explicamos los tipos de tela, licrados y ventajas para que tú y
+              tu equipo vendan con total seguridad.</p>
           </div>
 
           <div class="p-5 rounded-2xl bg-zinc-900/80 border border-zinc-800 hover:border-zinc-700 transition">
             <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-3">
               <i data-lucide="award" class="w-5 h-5"></i>
             </div>
-            <h4 class="font-heading font-bold text-white text-sm">Incentivos a Vendedores</h4>
-            <p class="text-xs text-zinc-400 mt-1.5">Iniciativas y planes de incentivos que motivan a tus asesores a superar metas comerciales.</p>
+            <h4 class="font-heading font-bold text-white text-sm">Premios y descuentos por meta</h4>
+            <p class="text-xs text-zinc-400 mt-1.5">Promociones y beneficios adicionales para quienes compran
+              constantemente en volumen.</p>
           </div>
 
           <div class="p-5 rounded-2xl bg-zinc-900/80 border border-zinc-800 hover:border-zinc-700 transition">
             <div class="w-10 h-10 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center mb-3">
               <i data-lucide="layers" class="w-5 h-5"></i>
             </div>
-            <h4 class="font-heading font-bold text-white text-sm">Portafolio Multimarca 360°</h4>
-            <p class="text-xs text-zinc-400 mt-1.5">Acceso simultáneo a Fénix, Romper, Jhonal y Lady's para cubrir cualquier perfil de cliente.</p>
+            <h4 class="font-heading font-bold text-white text-sm">4 marcas en un solo pedido</h4>
+            <p class="text-xs text-zinc-400 mt-1.5">Pide Fénix, Romper, Jhonal y Lady's en la misma compra para tener
+              ropa para todos los gustos.</p>
+          </div>
+
+          <div
+            class="p-5 rounded-2xl bg-zinc-900/80 border border-zinc-800 hover:border-zinc-700 transition sm:col-span-2">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-heading font-bold text-white text-sm">Atención directa por WhatsApp sin intermediarios
+                </h4>
+                <p class="text-xs text-zinc-400 mt-1">Cuentas con atención directa de un asesor comercial para resolver
+                  pedidos, consultar existencias y recibir despachos rápidos en cualquier ciudad de Colombia.</p>
+              </div>
+            </div>
           </div>
 
         </div>
 
       </div>
 
+      <!-- Quick 3-Step Distributor Onboarding Banner -->
+      <div
+        class="mt-16 p-8 rounded-3xl bg-gradient-to-r from-rose-950/40 via-zinc-900/80 to-zinc-950 border border-rose-500/30 shadow-2xl">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+          <span class="text-[11px] font-extrabold uppercase tracking-widest text-rose-400">Paso a paso</span>
+          <h3 class="font-heading font-bold text-2xl text-white mt-1">¿Cómo empezar a vender nuestras marcas?</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div class="p-4 rounded-2xl bg-zinc-950/60 border border-zinc-800/80">
+            <div
+              class="w-8 h-8 rounded-full bg-rose-500 text-white font-black text-sm flex items-center justify-center mx-auto mb-3 shadow-lg">
+              1</div>
+            <h4 class="font-bold text-white text-sm">Pide tu lista de precios</h4>
+            <p class="text-xs text-zinc-400 mt-1">Escríbenos por WhatsApp o déjanos tus datos en el cotizador de abajo.
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-zinc-950/60 border border-zinc-800/80">
+            <div
+              class="w-8 h-8 rounded-full bg-rose-500 text-white font-black text-sm flex items-center justify-center mx-auto mb-3 shadow-lg">
+              2</div>
+            <h4 class="font-bold text-white text-sm">Escoge tus prendas</h4>
+            <p class="text-xs text-zinc-400 mt-1">Combina referencias de Romper, Jhonal, Fénix y Lady's a tu gusto.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-zinc-950/60 border border-zinc-800/80">
+            <div
+              class="w-8 h-8 rounded-full bg-emerald-500 text-white font-black text-sm flex items-center justify-center mx-auto mb-3 shadow-lg">
+              3</div>
+            <h4 class="font-bold text-white text-sm">Recibe en tu ciudad y vende</h4>
+            <p class="text-xs text-zinc-400 mt-1">Te enviamos con garantía de confección y fotos para que empieces a
+              vender.</p>
+          </div>
+        </div>
+        <div class="mt-8 text-center">
+          <a href="#cotizador"
+            class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider transition shadow-xl hover:scale-105">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>Pedir información por WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- CATÁLOGOS DIGITALES 2026 (DOWNLOAD HUB) -->
+  <!-- CATÁLOGOS DIGITALES 2026 (DESCARGA DIRECTA) -->
   <section id="catalogos" class="py-24 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
+
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-        <span class="text-xs font-bold uppercase tracking-widest text-rose-500">Descarga Oficial</span>
-        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white">Catálogos Colección 2026</h2>
+        <span class="text-xs font-bold uppercase tracking-widest text-rose-500">Descarga directa</span>
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white">Catálogos de la colección 2026</h2>
         <p class="text-zinc-400 text-xs sm:text-sm">
-          Descarga los PDF completos de cada marca con todas las fotos, tablas de tallas, paleta de colores y especificaciones técnicas.
+          Descarga los PDF completos de cada marca con todas las fotos de modelos, tablas de tallas, variedad de colores
+          y detalles de confección.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        
+
         <!-- Catalog 1: Romper Conjunto & Camiseta -->
         <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-t-orange-500">
           <div>
@@ -615,14 +977,16 @@
               <span>2026</span>
             </div>
             <h3 class="font-heading font-bold text-lg text-white">Catálogo Romper</h3>
-            <p class="text-xs text-zinc-400 mt-1">Conjuntos Hombre, Camisetas Tela Fría 96/4 y Polos Deportivos.</p>
+            <p class="text-xs text-zinc-400 mt-1">Conjuntos para hombre, camisetas en tela fría y polos deportivos.</p>
           </div>
           <div class="mt-6 pt-4 border-t border-zinc-800 space-y-2">
-            <a href="Catálogo conjunto romper.pdf" target="_blank" class="w-full py-2 px-3 rounded-xl bg-zinc-800 hover:bg-orange-600 text-zinc-200 hover:text-white text-xs font-semibold flex items-center justify-between transition">
+            <a href="Catálogo conjunto romper.pdf" target="_blank"
+              class="w-full py-2 px-3 rounded-xl bg-zinc-800 hover:bg-orange-600 text-zinc-200 hover:text-white text-xs font-semibold flex items-center justify-between transition">
               <span>Conjuntos Romper</span>
               <i data-lucide="download" class="w-3.5 h-3.5"></i>
             </a>
-            <a href="Catalogo camiseta romper  .pdf" target="_blank" class="w-full py-2 px-3 rounded-xl bg-zinc-800 hover:bg-orange-600 text-zinc-200 hover:text-white text-xs font-semibold flex items-center justify-between transition">
+            <a href="Catalogo camiseta romper  .pdf" target="_blank"
+              class="w-full py-2 px-3 rounded-xl bg-zinc-800 hover:bg-orange-600 text-zinc-200 hover:text-white text-xs font-semibold flex items-center justify-between transition">
               <span>Camisetas Romper</span>
               <i data-lucide="download" class="w-3.5 h-3.5"></i>
             </a>
@@ -637,14 +1001,16 @@
               <span>2026</span>
             </div>
             <h3 class="font-heading font-bold text-lg text-white">Catálogo Jhonal</h3>
-            <p class="text-xs text-zinc-400 mt-1">Camisetas Cuello Redondo Algodón Licrado y Polos Clásicos.</p>
+            <p class="text-xs text-zinc-400 mt-1">Camisetas cuello redondo en algodón licrado y polos clásicos.</p>
           </div>
           <div class="mt-6 pt-4 border-t border-zinc-800 space-y-2">
-            <a href="Catalogo camiseta Jhonal .pdf" target="_blank" class="w-full py-2 px-3 rounded-xl bg-zinc-800 hover:bg-blue-600 text-zinc-200 hover:text-white text-xs font-semibold flex items-center justify-between transition">
+            <a href="Catalogo camiseta Jhonal .pdf" target="_blank"
+              class="w-full py-2 px-3 rounded-xl bg-zinc-800 hover:bg-blue-600 text-zinc-200 hover:text-white text-xs font-semibold flex items-center justify-between transition">
               <span>Camisetas Jhonal</span>
               <i data-lucide="download" class="w-3.5 h-3.5"></i>
             </a>
-            <a href="Catálogo Jhonal polo.pdf" target="_blank" class="w-full py-2 px-3 rounded-xl bg-zinc-800 hover:bg-blue-600 text-zinc-200 hover:text-white text-xs font-semibold flex items-center justify-between transition">
+            <a href="Catálogo Jhonal polo.pdf" target="_blank"
+              class="w-full py-2 px-3 rounded-xl bg-zinc-800 hover:bg-blue-600 text-zinc-200 hover:text-white text-xs font-semibold flex items-center justify-between transition">
               <span>Polos Jhonal</span>
               <i data-lucide="download" class="w-3.5 h-3.5"></i>
             </a>
@@ -659,14 +1025,16 @@
               <span>2026</span>
             </div>
             <h3 class="font-heading font-bold text-lg text-white">Catálogo Fénix</h3>
-            <p class="text-xs text-zinc-400 mt-1">Línea Oversize Streetwear y Colección Fénix Dama.</p>
+            <p class="text-xs text-zinc-400 mt-1">Línea oversize urbana y colección Fénix Dama.</p>
           </div>
           <div class="mt-6 pt-4 border-t border-zinc-800 space-y-2">
-            <a href="Fénix overside.pdf" target="_blank" class="w-full py-2 px-3 rounded-xl bg-zinc-800 hover:bg-amber-600 text-zinc-200 hover:text-white text-xs font-semibold flex items-center justify-between transition">
+            <a href="Fénix overside.pdf" target="_blank"
+              class="w-full py-2 px-3 rounded-xl bg-zinc-800 hover:bg-amber-600 text-zinc-200 hover:text-white text-xs font-semibold flex items-center justify-between transition">
               <span>Fénix Oversize</span>
               <i data-lucide="download" class="w-3.5 h-3.5"></i>
             </a>
-            <a href="Fénix dama .pdf" target="_blank" class="w-full py-2 px-3 rounded-xl bg-zinc-800 hover:bg-amber-600 text-zinc-200 hover:text-white text-xs font-semibold flex items-center justify-between transition">
+            <a href="Fénix dama .pdf" target="_blank"
+              class="w-full py-2 px-3 rounded-xl bg-zinc-800 hover:bg-amber-600 text-zinc-200 hover:text-white text-xs font-semibold flex items-center justify-between transition">
               <span>Fénix Dama</span>
               <i data-lucide="download" class="w-3.5 h-3.5"></i>
             </a>
@@ -681,10 +1049,11 @@
               <span>2026</span>
             </div>
             <h3 class="font-heading font-bold text-lg text-white">Catálogo Lady's</h3>
-            <p class="text-xs text-zinc-400 mt-1">Colección Ropa Femenina, Siluetas Confort y Básicos.</p>
+            <p class="text-xs text-zinc-400 mt-1">Colección de ropa femenina, cortes confort y prendas básicas.</p>
           </div>
           <div class="mt-6 pt-4 border-t border-zinc-800 space-y-2">
-            <a href="Catálogo ladys .pdf" target="_blank" class="w-full py-2 px-3 rounded-xl bg-zinc-800 hover:bg-pink-600 text-zinc-200 hover:text-white text-xs font-semibold flex items-center justify-between transition">
+            <a href="Catálogo ladys .pdf" target="_blank"
+              class="w-full py-2 px-3 rounded-xl bg-zinc-800 hover:bg-pink-600 text-zinc-200 hover:text-white text-xs font-semibold flex items-center justify-between transition">
               <span>Colección Lady's</span>
               <i data-lucide="download" class="w-3.5 h-3.5"></i>
             </a>
@@ -696,57 +1065,68 @@
     </div>
   </section>
 
-  <!-- COTIZADOR RÁPIDO B2B & SIMULADOR MAYORISTA -->
+  <!-- COTIZADOR RÁPIDO PARA MAYORISTAS -->
   <section id="cotizador" class="py-24 bg-zinc-950 border-t border-zinc-800 relative">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
+
       <div class="glass-card rounded-3xl p-8 sm:p-12 border border-zinc-700/80 shadow-2xl relative">
         <div class="text-center max-w-xl mx-auto mb-10 space-y-2">
-          <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">Atención Inmediata</span>
-          <h2 class="font-heading font-extrabold text-2xl sm:text-4xl text-white">Cotizador Rápido Mayorista</h2>
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">Atención rápida</span>
+          <h2 class="font-heading font-extrabold text-2xl sm:text-4xl text-white">Cotizador para mayoristas</h2>
           <p class="text-zinc-400 text-xs sm:text-sm">
-            Selecciona la marca y volumen estimado para armar tu solicitud con un clic directamente a nuestro equipo comercial.
+            Dinos qué marcas y cantidades te interesan para enviarte la lista de precios y asesorarte de inmediato por
+            WhatsApp.
           </p>
         </div>
 
         <form @submit.prevent="submitQuote()" class="space-y-6">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            
+
             <!-- Nombre / Negocio -->
             <div>
-              <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Tu Nombre o Nombre de Negocio</label>
-              <input type="text" x-model="quote.name" required placeholder="Ej: Confecciones y Almacén El Sol" class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-sm focus:border-rose-500 focus:outline-none transition">
+              <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Tu nombre o nombre
+                de tu negocio</label>
+              <input type="text" x-model="quote.name" required placeholder="Ej: Confecciones y Almacén El Sol"
+                class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-sm focus:border-rose-500 focus:outline-none transition">
             </div>
 
             <!-- Ciudad / Ubicación -->
             <div>
-              <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Ciudad o Municipio</label>
-              <input type="text" x-model="quote.city" required placeholder="Ej: Medellín, Cali, Bogotá, Barranquilla..." class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-sm focus:border-rose-500 focus:outline-none transition">
+              <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Ciudad o
+                municipio</label>
+              <input type="text" x-model="quote.city" required
+                placeholder="Ej: Medellín, Cali, Bogotá, Barranquilla, Cúcuta..."
+                class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-sm focus:border-rose-500 focus:outline-none transition">
             </div>
 
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            
+
             <!-- Marca de Interés -->
             <div>
-              <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Marca de Principal Interés</label>
-              <select x-model="quote.brand" class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-sm focus:border-rose-500 focus:outline-none transition">
-                <option value="Todas las 4 marcas (Portafolio Multimarca)">Todas las 4 marcas (Multimarca)</option>
-                <option value="Romper (Conjuntos y Tela Fría)">Romper (Conjuntos y Tela Fría)</option>
-                <option value="Jhonal (Camisetas Licradas y Polos)">Jhonal (Camisetas Licradas y Polos)</option>
-                <option value="Fénix (Oversize y Dama)">Fénix (Oversize y Dama)</option>
-                <option value="Lady's (Ropa Femenina)">Lady's (Ropa Femenina)</option>
+              <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Marca que más te
+                interesa</label>
+              <select x-model="quote.brand"
+                class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-sm focus:border-rose-500 focus:outline-none transition">
+                <option value="Todas las 4 marcas (Surtido completo multimarca)">Todas las 4 marcas (Surtido completo)
+                </option>
+                <option value="Romper (Conjuntos y tela fría)">Romper (Conjuntos y tela fría)</option>
+                <option value="Jhonal (Camisetas licradas y polos)">Jhonal (Camisetas licradas y polos)</option>
+                <option value="Fénix (Oversize y dama)">Fénix (Oversize y dama)</option>
+                <option value="Lady's (Ropa femenina)">Lady's (Ropa femenina)</option>
               </select>
             </div>
 
             <!-- Volumen Estimado -->
             <div>
-              <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Volumen Estimado de Compra</label>
-              <select x-model="quote.volume" class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-sm focus:border-rose-500 focus:outline-none transition">
-                <option value="12 a 50 unidades (Mayorista Inicial)">12 a 50 unidades (Mayorista Inicial)</option>
-                <option value="50 a 200 unidades (Distribuidor Local)">50 a 200 unidades (Distribuidor Local)</option>
-                <option value="+200 unidades (Distribuidor Regional / Cadena)">+200 unidades (Distribuidor Regional / Cadena)</option>
+              <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Cantidad aproximada
+                a comprar</label>
+              <select x-model="quote.volume"
+                class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-sm focus:border-rose-500 focus:outline-none transition">
+                <option value="12 a 50 prendas (Para iniciar pedido)">12 a 50 prendas (Para iniciar)</option>
+                <option value="50 a 200 prendas (Para surtir tienda)">50 a 200 prendas (Para surtir tienda)</option>
+                <option value="+200 prendas (Distribuidor mayorista)">Más de 200 prendas (Distribuidor grande)</option>
               </select>
             </div>
 
@@ -754,14 +1134,18 @@
 
           <!-- Mensaje Opcional -->
           <div>
-            <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">Observaciones o Referencias Específicas</label>
-            <textarea x-model="quote.notes" rows="3" placeholder="Ej: Me interesan las referencias 6016-01 y 6005-00 para surtir tienda..." class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-sm focus:border-rose-500 focus:outline-none transition"></textarea>
+            <label class="block text-xs font-semibold text-zinc-300 uppercase tracking-wider mb-2">¿Tienes alguna
+              referencia o duda en mente? (opcional)</label>
+            <textarea x-model="quote.notes" rows="3"
+              placeholder="Ej: Me interesan las camisetas licradas de Jhonal y polos Romper para surtir mi local..."
+              class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-sm focus:border-rose-500 focus:outline-none transition"></textarea>
           </div>
 
           <!-- Submit to WhatsApp -->
-          <button type="submit" class="w-full py-4 rounded-xl font-bold text-sm uppercase tracking-wider bg-emerald-600 hover:bg-emerald-500 text-white transition-all shadow-xl shadow-emerald-950/50 flex items-center justify-center gap-3">
+          <button type="submit"
+            class="w-full py-4 rounded-xl font-bold text-sm uppercase tracking-wider bg-emerald-600 hover:bg-emerald-500 text-white transition-all shadow-xl shadow-emerald-950/50 flex items-center justify-center gap-3">
             <i data-lucide="send" class="w-4 h-4"></i>
-            <span>Enviar Solicitud a WhatsApp Asesor Comercial</span>
+            <span>Enviar cotización a WhatsApp asesor comercial</span>
           </button>
         </form>
 
@@ -770,78 +1154,104 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-black border-t border-zinc-800 py-16 text-zinc-400 text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
+  <!-- FOOTER (SOLID OPAQUE DARK BACKGROUND - HIGH CONTRAST) -->
+  <footer class="relative z-30 bg-[#060709] border-t-2 border-t-rose-600/50 py-16 text-zinc-300 text-xs shadow-2xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-        
-        <!-- Col 1 -->
+
+        <!-- Col 1: Brand & Owl Logo -->
         <div class="space-y-4">
-          <div class="flex items-center gap-2">
-            <div class="w-8 h-8 rounded-lg bg-zinc-800 border border-zinc-700 flex items-center justify-center font-heading font-black text-sm text-white">
-              J<span class="text-rose-500">80</span>
+          <div class="flex items-center gap-3">
+            <div
+              class="relative w-12 h-12 rounded-full p-[1.5px] bg-gradient-to-b from-zinc-200 via-zinc-500 to-zinc-800 shadow-lg">
+              <img src="Buho jhonal.png" alt="Jhonal 80 Búho"
+                class="w-full h-full object-contain rounded-full bg-zinc-950">
             </div>
-            <span class="font-heading font-black text-base tracking-wider text-white">JHONAL 80</span>
+            <div>
+              <span class="font-heading font-black text-lg tracking-wider text-white">JHONAL <span
+                  class="text-rose-500">80</span></span>
+              <div class="text-[9px] uppercase tracking-widest text-zinc-300 font-bold">EST. 2007 • DISEÑO EXCLUSIVO
+              </div>
+            </div>
           </div>
-          <p class="text-zinc-500 leading-relaxed">
-            Empresa colombiana con amplia experiencia en confección y comercialización de camisetas, polos y conjuntos de alta rotación.
+          <p class="text-zinc-300 leading-relaxed text-xs">
+            Fábrica y confección 100% colombiana. Surtimos a distribuidores, tiendas y almacenes con camisetas licradas,
+            polos y conjuntos de alta rotación y precios directos de fábrica.
           </p>
         </div>
 
         <!-- Col 2 -->
         <div>
-          <h4 class="font-bold text-white uppercase tracking-wider mb-4">Portafolio</h4>
-          <ul class="space-y-2">
-            <li><a href="#portafolio" @click="filterByBrand('Romper')" class="hover:text-white transition">Línea Romper</a></li>
-            <li><a href="#portafolio" @click="filterByBrand('Jhonal')" class="hover:text-white transition">Línea Jhonal</a></li>
-            <li><a href="#portafolio" @click="filterByBrand('Fénix')" class="hover:text-white transition">Línea Fénix</a></li>
-            <li><a href="#portafolio" @click="filterByBrand('Ladys')" class="hover:text-white transition">Línea Lady's</a></li>
+          <h4 class="font-heading font-extrabold text-white text-sm uppercase tracking-wider mb-4">Nuestras marcas</h4>
+          <ul class="space-y-2.5 font-medium">
+            <li><a href="#portafolio" @click="filterByBrand('Romper')"
+                class="text-zinc-300 hover:text-white transition flex items-center gap-1.5"><span>› Línea
+                  Romper</span></a></li>
+            <li><a href="#portafolio" @click="filterByBrand('Jhonal')"
+                class="text-zinc-300 hover:text-white transition flex items-center gap-1.5"><span>› Línea
+                  Jhonal</span></a></li>
+            <li><a href="#portafolio" @click="filterByBrand('Fénix')"
+                class="text-zinc-300 hover:text-white transition flex items-center gap-1.5"><span>› Línea
+                  Fénix</span></a></li>
+            <li><a href="#portafolio" @click="filterByBrand('Ladys')"
+                class="text-zinc-300 hover:text-white transition flex items-center gap-1.5"><span>› Línea
+                  Lady's</span></a></li>
           </ul>
         </div>
 
         <!-- Col 3 -->
         <div>
-          <h4 class="font-bold text-white uppercase tracking-wider mb-4">Distribuidores</h4>
-          <ul class="space-y-2">
-            <li><a href="#distribuidores" class="hover:text-white transition">Beneficios B2B</a></li>
-            <li><a href="#distribuidores" class="hover:text-white transition">Cobranding y Exhibición</a></li>
-            <li><a href="#catalogos" class="hover:text-white transition">Descarga de Catálogos</a></li>
-            <li><a href="#cotizador" class="hover:text-white transition">Cotizador de Volumen</a></li>
+          <h4 class="font-heading font-extrabold text-white text-sm uppercase tracking-wider mb-4">Para mayoristas</h4>
+          <ul class="space-y-2.5 font-medium">
+            <li><a href="#distribuidores"
+                class="text-zinc-300 hover:text-white transition flex items-center gap-1.5"><span>› Beneficios de ser
+                  distribuidor</span></a></li>
+            <li><a href="#distribuidores"
+                class="text-zinc-300 hover:text-white transition flex items-center gap-1.5"><span>› Fotos y apoyo
+                  publicitario</span></a></li>
+            <li><a href="#catalogos" class="text-zinc-300 hover:text-white transition flex items-center gap-1.5"><span>›
+                  Descargar catálogos en PDF</span></a></li>
+            <li><a href="#cotizador" class="text-zinc-300 hover:text-white transition flex items-center gap-1.5"><span>›
+                  Cotizar pedido por volumen</span></a></li>
           </ul>
         </div>
 
         <!-- Col 4 -->
         <div>
-          <h4 class="font-bold text-white uppercase tracking-wider mb-4">Canales Oficiales</h4>
-          <div class="space-y-3">
-            <a href="https://www.instagram.com/jhonal.80/" target="_blank" class="flex items-center gap-2 text-zinc-300 hover:text-rose-400 transition">
-              <i data-lucide="instagram" class="w-4 h-4"></i>
+          <h4 class="font-heading font-extrabold text-white text-sm uppercase tracking-wider mb-4">Contacto y redes</h4>
+          <div class="space-y-3 font-medium">
+            <a href="https://www.instagram.com/jhonal.80/" target="_blank"
+              class="flex items-center gap-2 text-zinc-200 hover:text-rose-400 transition">
+              <i data-lucide="instagram" class="w-4 h-4 text-rose-500"></i>
               <span>@jhonal.80</span>
             </a>
-            <a href="https://www.facebook.com/p/Jhonal80-100091825447640/" target="_blank" class="flex items-center gap-2 text-zinc-300 hover:text-blue-400 transition">
-              <i data-lucide="facebook" class="w-4 h-4"></i>
+            <a href="https://www.facebook.com/p/Jhonal80-100091825447640/" target="_blank"
+              class="flex items-center gap-2 text-zinc-200 hover:text-blue-400 transition">
+              <i data-lucide="facebook" class="w-4 h-4 text-blue-500"></i>
               <span>Jhonal80 Oficial</span>
             </a>
-            <div class="pt-2 text-zinc-500">
-              🇨🇴 Hecho y Confeccionado en Colombia
+            <div class="pt-2 text-zinc-300 font-semibold flex items-center gap-1.5">
+              <span>🇨🇴 Confeccionado 100% en Colombia</span>
             </div>
           </div>
         </div>
 
       </div>
 
-      <div class="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-zinc-500">
+      <div
+        class="pt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-zinc-400 font-medium">
         <p>© 2026 Jhonal 80 S.A.S. Todos los derechos reservados.</p>
-        <p>Sitio Corporativo B2B Multimarca.</p>
+        <p class="text-zinc-300">Confección y ventas al por mayor en Colombia.</p>
       </div>
 
     </div>
   </footer>
 
-  <!-- Floating Multi-Channel WhatsApp Button -->
+  <!-- Floating WhatsApp Button -->
   <div class="fixed bottom-6 right-6 z-50">
-    <a :href="getGeneralWhatsAppLink()" target="_blank" class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center shadow-2xl shadow-emerald-950/80 hover:scale-110 transition-all">
+    <a :href="getGeneralWhatsAppLink()" target="_blank"
+      class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center shadow-2xl shadow-emerald-950/80 hover:scale-110 transition-all">
       <i data-lucide="message-circle" class="w-7 h-7"></i>
     </a>
   </div>
@@ -861,8 +1271,8 @@
         quote: {
           name: '',
           city: '',
-          brand: 'Todas las 4 marcas (Portafolio Multimarca)',
-          volume: '50 a 200 unidades (Distribuidor Local)',
+          brand: 'Todas las 4 marcas (Surtido completo multimarca)',
+          volume: '50 a 200 prendas (Para surtir tienda)',
           notes: ''
         },
         products: [
@@ -870,104 +1280,150 @@
           {
             id: 1,
             brand: 'Romper',
-            ref: 'REF: 6016-01',
-            title: 'Conjunto Hombre Romper',
-            subtitle: 'Perfect Imperfect Style',
-            category: 'Conjunto Short & Camiseta',
-            composition: '95% Algodón, 5% Spandex',
-            fit: 'Corte Relajado Premium',
-            colors: ['#93C5FD', '#FCA5A5', '#E4E4E7', '#18181B']
+            ref: 'REF: 6002-02',
+            title: 'Camiseta polo Romper azul petróleo',
+            subtitle: 'Confección premium con detalles en cuello',
+            category: 'Polo hombre deportiva y casual',
+            composition: 'Algodón con spandex suave',
+            fit: 'Regular fit',
+            image: 'POLO HOMBRE ROMPER REF 6002 02.jpeg',
+            colors: ['#0284C7', '#1E293B', '#E4E4E7']
           },
           {
             id: 2,
             brand: 'Romper',
-            ref: 'REF: 6016-02',
-            title: 'Conjunto Hombre Style',
-            subtitle: 'Colección Tela Fría',
-            category: 'Conjunto Short & Camiseta',
-            composition: '96% Algodón Frío, 4% Spandex',
-            fit: 'Tacto Frío Ultraligero',
-            colors: ['#F472B6', '#E2E8F0', '#0F172A']
+            ref: 'REF: 6002-03',
+            title: 'Camiseta polo Romper vino y gris',
+            subtitle: 'Estilo clásico contemporáneo',
+            category: 'Polo hombre casual',
+            composition: 'Algodón suave de alta rotación',
+            fit: 'Ajuste anatómico cómodo',
+            image: 'POLO HOMBRE ROMPER REF 6002 03.jpeg',
+            colors: ['#881337', '#9CA3AF', '#18181B']
           },
           {
             id: 3,
             brand: 'Romper',
-            ref: 'REF: 6005-00',
-            title: 'Camiseta Hombre Future',
-            subtitle: 'Línea Casual Urbana',
-            category: 'Camiseta Cuello Redondo',
-            composition: '96% Algodón Frío, 4% Spandex',
-            fit: 'Silueta Regular Fit',
-            colors: ['#FFFFFF', '#D1D5DB', '#71717A', '#18181B']
-          },
-          {
-            id: 4,
-            brand: 'Romper',
-            ref: 'REF: 6005-02',
-            title: 'Camiseta Active Always',
-            subtitle: 'Edición Magenta Sport',
-            category: 'Camiseta Cuello Redondo',
-            composition: '96% Algodón Frío, 4% Spandex',
-            fit: 'Confort Elástico',
-            colors: ['#9D174D', '#BE185D', '#581C87']
+            ref: 'REF: 6002-04',
+            title: 'Camiseta polo Romper blanca y azul',
+            subtitle: 'Combinación fresca y juvenil',
+            category: 'Polo hombre sport',
+            composition: 'Algodón respirable',
+            fit: 'Corte moderno',
+            image: 'POLO HOMBRE ROMPER REF 6002 04.jpeg',
+            colors: ['#FFFFFF', '#2563EB', '#374151']
           },
           // Jhonal
           {
+            id: 4,
+            brand: 'Jhonal',
+            ref: 'REF: 6001-01',
+            title: 'Camiseta polo Jhonal café, blanca y gris',
+            subtitle: 'Diseño exclusivo con franjas frontales',
+            category: 'Polo hombre clásica',
+            composition: 'Algodón licrado suave',
+            fit: 'Silueta perfecta',
+            image: 'Camiseta polo cafe blanca gris.jpeg',
+            colors: ['#78350F', '#FFFFFF', '#9CA3AF']
+          },
+          {
             id: 5,
             brand: 'Jhonal',
-            ref: 'REF: 6001-00',
-            title: 'Camiseta Básica Licrada',
-            subtitle: 'Esencia Masculina Pura',
-            category: 'Camiseta Licrada',
-            composition: 'Algodón Licrado Premium',
-            fit: 'Ajuste Anatómico',
-            colors: ['#0284C7', '#1E293B', '#881337', '#F8FAFC']
+            ref: 'REF: 6001-02',
+            title: 'Camiseta polo Jhonal café elegante',
+            subtitle: 'Tono tierra versátil para toda ocasión',
+            category: 'Polo hombre urbana',
+            composition: 'Algodón licrado premium',
+            fit: 'Ajuste anatómico',
+            image: 'Camiseta polo cafe.jpeg',
+            colors: ['#78350F', '#B45309', '#1C1917']
           },
           {
             id: 6,
             brand: 'Jhonal',
-            ref: 'REF: 6001-01',
-            title: 'Camiseta 80FUN Hand Crafted',
-            subtitle: 'Gráfico Tipográfico 80',
-            category: 'Camiseta Licrada Estampada',
-            composition: 'Algodón Licrado',
-            fit: 'Cuello Redondo Reforzado',
-            colors: ['#451A03', '#1E293B', '#F1F5F9']
+            ref: 'REF: 6001-03',
+            title: 'Camiseta polo Jhonal gris perla',
+            subtitle: 'Básico indispensable para tienda',
+            category: 'Polo hombre sport',
+            composition: 'Algodón suave 95/5',
+            fit: 'Regular fit confort',
+            image: 'Camiseta polo gris.jpeg',
+            colors: ['#9CA3AF', '#4B5563', '#1F2937']
           },
           {
             id: 7,
             brand: 'Jhonal',
-            ref: 'REF: 6001-02',
-            title: 'Camiseta Sublime Original',
-            subtitle: 'Colección Vintage Athletics',
-            category: 'Camiseta Licrada',
-            composition: 'Algodón Licrado',
-            fit: 'Regular Fit Confort',
-            colors: ['#D6D3D1', '#78716C', '#1C1917']
+            ref: 'REF: 6001-04',
+            title: 'Camiseta polo Jhonal tricolor',
+            subtitle: 'Franjas horizontales de tendencia',
+            category: 'Polo hombre moderna',
+            composition: 'Algodón licrado de alta durabilidad',
+            fit: 'Corte estilizado',
+            image: 'Camiseta polo tres colores horizntales.jpeg',
+            colors: ['#1E293B', '#DC2626', '#FFFFFF']
           },
           // Fénix
           {
             id: 8,
             brand: 'Fénix',
-            ref: 'REF: FNX-OVR-01',
-            title: 'Camiseta Heavyweight Oversize',
-            subtitle: 'Tendencia Drop Shoulder',
-            category: 'Línea Oversize',
-            composition: '100% Algodón Pesado 240g',
-            fit: 'Boxy Oversize Fit',
+            ref: 'REF: FNX-01',
+            title: 'Camiseta polo Fénix diseño especial',
+            subtitle: 'Cortes limpios y cuello estructurado',
+            category: 'Polo y moda urbana',
+            composition: 'Algodón peinado de alto gramaje',
+            fit: 'Corte moderno urbano',
+            image: 'WhatsApp Image 2026-09-11 at 9.44.49 AM.jpeg',
             colors: ['#09090B', '#F4F4F5', '#71717A']
+          },
+          {
+            id: 9,
+            brand: 'Fénix',
+            ref: 'REF: FNX-02',
+            title: 'Colección Fénix urbana con cuello tejido',
+            subtitle: 'Detalles diferenciadores para tu mostrador',
+            category: 'Línea contemporánea',
+            composition: 'Algodón suave de alta resistencia',
+            fit: 'Silueta confortable',
+            image: 'WhatsApp Image 2026-09-11 at 9.44.55 AM.jpeg',
+            colors: ['#1E3A8A', '#F3F4F6', '#B45309']
           },
           // Lady's
           {
-            id: 9,
+            id: 10,
             brand: 'Ladys',
-            ref: 'REF: LDY-BAS-01',
-            title: 'Básico Esencial Lady\'s',
-            subtitle: 'Colección Femenina Confort',
-            category: 'Ropa Femenina',
-            composition: 'Algodón Peinado Soft',
-            fit: 'Silueta Femenina Confort',
+            ref: 'REF: LDY-01',
+            title: 'Polo femenina Lady\'s cuello fino',
+            subtitle: 'Tacto ultrasuave y horma estilizada',
+            category: 'Ropa femenina confort',
+            composition: 'Algodón suave con elastano',
+            fit: 'Silueta femenina estilizada',
+            image: 'WhatsApp Image 2026-09-11 at 9.45.02 AM.jpeg',
             colors: ['#FCE7F3', '#FBCFE8', '#BE185D', '#FFFFFF']
+          },
+          {
+            id: 11,
+            brand: 'Ladys',
+            ref: 'REF: LDY-02',
+            title: 'Colección Lady\'s moda y básicos',
+            subtitle: 'Prendas versátiles para dama',
+            category: 'Moda femenina cotidiana',
+            composition: 'Tela peinada de máxima frescura',
+            fit: 'Horma favorecedora',
+            image: 'WhatsApp Image 2026-09-11 at 9.45.10 AM.jpeg',
+            colors: ['#F43F5E', '#18181B', '#E2E8F0']
+          },
+          // Romper Kids / Colección adicional
+          {
+            id: 12,
+            brand: 'Romper',
+            ref: 'REF: 6005-KID',
+            title: 'Colección polo Romper contrastes',
+            subtitle: 'Variedad de colores y combinaciones',
+            category: 'Línea casual y juvenil',
+            composition: 'Algodón suave 96/4',
+            fit: 'Confort elástico',
+            image: 'WhatsApp Image 2026-09-11 at 9.45.00 AM.jpeg',
+            colors: ['#059669', '#10B981', '#111827']
           }
         ],
 
@@ -985,7 +1441,7 @@
         },
 
         getBrandBadgeColor(brand) {
-          switch(brand.toLowerCase()) {
+          switch (brand.toLowerCase()) {
             case 'romper': return 'bg-orange-500/20 text-orange-400 border border-orange-500/30';
             case 'jhonal': return 'bg-blue-500/20 text-blue-400 border border-blue-500/30';
             case 'fénix': return 'bg-amber-500/20 text-amber-400 border border-amber-500/30';
@@ -1006,13 +1462,13 @@
 
         submitQuote() {
           const msg = `*SOLICITUD DE COTIZACIÓN MAYORISTA - JHONAL 80*\n\n` +
-                      `👤 *Nombre/Negocio:* ${this.quote.name}\n` +
-                      `📍 *Ciudad:* ${this.quote.city}\n` +
-                      `🏷️ *Marca:* ${this.quote.brand}\n` +
-                      `📦 *Volumen Estimado:* ${this.quote.volume}\n` +
-                      `📝 *Detalles:* ${this.quote.notes || 'Sin notas adicionales'}\n\n` +
-                      `Solicitud enviada desde el portal web.`;
-          
+            `👤 *Nombre/Negocio:* ${this.quote.name}\n` +
+            `📍 *Ciudad:* ${this.quote.city}\n` +
+            `🏷️ *Marca:* ${this.quote.brand}\n` +
+            `📦 *Cantidad aproximada:* ${this.quote.volume}\n` +
+            `📝 *Detalles:* ${this.quote.notes || 'Sin notas adicionales'}\n\n` +
+            `Solicitud enviada desde el portal web.`;
+
           const url = `https://wa.me/573000000000?text=${encodeURIComponent(msg)}`;
           window.open(url, '_blank');
         }
@@ -1024,4 +1480,5 @@
     });
   </script>
 </body>
+
 </html>
