@@ -366,7 +366,7 @@
             <!-- Logo 1: Fénix -->
             <a href="#portafolio" @click="filterByBrand('Fénix')" class="group relative rounded-2xl bg-zinc-950/90 border border-zinc-800/90 hover:border-amber-500/60 p-4 sm:p-5 flex flex-col items-center justify-center h-36 sm:h-40 backdrop-blur-md transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-amber-950/30">
               <div class="w-full h-16 flex items-center justify-center overflow-hidden">
-                <img src="logo fenix.jpeg" alt="Logo Fénix" class="max-h-12 w-auto object-contain rounded filter brightness-110 group-hover:scale-110 transition-transform">
+                <img src="logo-fenix-clean.png" alt="Logo Fénix" class="max-h-12 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(255,255,255,0.2)] group-hover:scale-110 transition-transform">
               </div>
               <div class="mt-3 text-center">
                 <span class="text-xs font-bold uppercase tracking-wider text-zinc-200 group-hover:text-amber-400 transition">Fénix</span>
@@ -376,9 +376,8 @@
 
             <!-- Logo 2: Romper -->
             <a href="#portafolio" @click="filterByBrand('Romper')" class="group relative rounded-2xl bg-zinc-950/90 border border-zinc-800/90 hover:border-orange-500/60 p-4 sm:p-5 flex flex-col items-center justify-center h-36 sm:h-40 backdrop-blur-md transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-orange-950/30">
-              <div class="w-full h-16 flex flex-col items-center justify-center">
-                <span class="font-heading font-black text-2xl sm:text-3xl tracking-wider text-orange-500 group-hover:text-orange-400 transition drop-shadow-md">ROMPER</span>
-                <span class="text-[9px] font-mono tracking-widest text-zinc-400 uppercase">Athleisure & Casual</span>
+              <div class="w-full h-16 flex items-center justify-center overflow-hidden">
+                <img src="logo-romper-clean.png" alt="Logo Romper" class="max-h-14 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(234,88,12,0.35)] group-hover:scale-110 transition-transform">
               </div>
               <div class="mt-3 text-center">
                 <span class="text-xs font-bold uppercase tracking-wider text-zinc-200 group-hover:text-orange-400 transition">Romper</span>
@@ -389,7 +388,7 @@
             <!-- Logo 3: Jhonal -->
             <a href="#portafolio" @click="filterByBrand('Jhonal')" class="group relative rounded-2xl bg-zinc-950/90 border border-zinc-800/90 hover:border-blue-500/60 p-4 sm:p-5 flex flex-col items-center justify-center h-36 sm:h-40 backdrop-blur-md transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-950/30">
               <div class="w-full h-16 flex items-center justify-center overflow-hidden">
-                <img src="logo jhonal 80.png" alt="Logo Jhonal 80" class="max-h-14 w-auto object-contain filter drop-shadow-md group-hover:scale-110 transition-transform">
+                <img src="logo-jhonal-clean.png" alt="Logo Jhonal 80" class="max-h-16 w-auto object-contain filter drop-shadow-[0_2px_10px_rgba(37,99,235,0.35)] group-hover:scale-110 transition-transform">
               </div>
               <div class="mt-3 text-center">
                 <span class="text-xs font-bold uppercase tracking-wider text-zinc-200 group-hover:text-blue-400 transition">Jhonal</span>
@@ -399,8 +398,8 @@
 
             <!-- Logo 4: Lady's -->
             <a href="#portafolio" @click="filterByBrand('Ladys')" class="group relative rounded-2xl bg-zinc-950/90 border border-zinc-800/90 hover:border-pink-500/60 p-4 sm:p-5 flex flex-col items-center justify-center h-36 sm:h-40 backdrop-blur-md transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-pink-950/30">
-              <div class="w-full h-16 flex items-center justify-center overflow-hidden bg-white/95 rounded-xl p-2">
-                <img src="logo ladys.jpeg" alt="Logo Lady's" class="max-h-12 w-auto object-contain filter drop-shadow-sm group-hover:scale-110 transition-transform">
+              <div class="w-full h-16 flex items-center justify-center overflow-hidden">
+                <img src="logo-ladys-clean.png" alt="Logo Lady's" class="max-h-14 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(219,39,119,0.35)] group-hover:scale-110 transition-transform">
               </div>
               <div class="mt-3 text-center">
                 <span class="text-xs font-bold uppercase tracking-wider text-zinc-200 group-hover:text-pink-400 transition">Lady's</span>
@@ -498,15 +497,16 @@
           <div
             class="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl group-hover:bg-orange-500/20 transition-all">
           </div>
-          <div class="flex items-center justify-between mb-6">
+          <div class="flex items-center justify-between mb-4">
             <span
               class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-orange-500/20 text-orange-400 border border-orange-500/30">
               Streetwear y deportivo
             </span>
             <i data-lucide="sparkles" class="w-5 h-5 text-orange-400"></i>
           </div>
-          <h3 class="font-heading font-black text-2xl text-white group-hover:text-orange-400 transition-colors">ROMPER
-          </h3>
+          <div class="h-14 flex items-center mb-2">
+            <img src="logo-romper-clean.png" alt="Romper" class="max-h-12 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(234,88,12,0.3)]">
+          </div>
           <p class="text-xs text-zinc-400 mt-2 line-clamp-3">
             Conjuntos casuales, camisetas en tela fría 96% algodón con 4% spandex, polos deportivos y línea infantil
             Romper Kids.
@@ -530,15 +530,16 @@
           <div
             class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all">
           </div>
-          <div class="flex items-center justify-between mb-6">
+          <div class="flex items-center justify-between mb-4">
             <span
               class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-blue-500/20 text-blue-400 border border-blue-500/30">
               Clásicos y urbanos
             </span>
             <i data-lucide="shield-check" class="w-5 h-5 text-blue-400"></i>
           </div>
-          <h3 class="font-heading font-black text-2xl text-white group-hover:text-blue-400 transition-colors">JHONAL
-          </h3>
+          <div class="h-14 flex items-center mb-2">
+            <img src="logo-jhonal-clean.png" alt="Jhonal 80" class="max-h-14 w-auto object-contain filter drop-shadow-[0_2px_10px_rgba(37,99,235,0.3)]">
+          </div>
           <p class="text-xs text-zinc-400 mt-2 line-clamp-3">
             La línea preferida para hombre: camisetas cuello redondo en algodón licrado de ajuste impecable y polos con
             estilo.
@@ -562,15 +563,16 @@
           <div
             class="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl group-hover:bg-amber-500/20 transition-all">
           </div>
-          <div class="flex items-center justify-between mb-6">
+          <div class="flex items-center justify-between mb-4">
             <span
               class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/30">
               Oversize y moda urbana
             </span>
             <i data-lucide="flame" class="w-5 h-5 text-amber-400"></i>
           </div>
-          <h3 class="font-heading font-black text-2xl text-white group-hover:text-amber-400 transition-colors">FÉNIX
-          </h3>
+          <div class="h-14 flex items-center mb-2">
+            <img src="logo-fenix-clean.png" alt="Fénix" class="max-h-11 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(255,255,255,0.2)]">
+          </div>
           <p class="text-xs text-zinc-400 mt-2 line-clamp-3">
             Siluetas oversize en tendencia, prendas con excelente peso, diseños unisex y la colección Fénix Dama para
             quienes buscan moda moderna.
@@ -594,15 +596,16 @@
           <div
             class="absolute top-0 right-0 w-32 h-32 bg-pink-500/10 rounded-full blur-2xl group-hover:bg-pink-500/20 transition-all">
           </div>
-          <div class="flex items-center justify-between mb-6">
+          <div class="flex items-center justify-between mb-4">
             <span
               class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-pink-500/20 text-pink-400 border border-pink-500/30">
               Ropa femenina y cómoda
             </span>
             <i data-lucide="heart" class="w-5 h-5 text-pink-400"></i>
           </div>
-          <h3 class="font-heading font-black text-2xl text-white group-hover:text-pink-400 transition-colors">LADY'S
-          </h3>
+          <div class="h-14 flex items-center mb-2">
+            <img src="logo-ladys-clean.png" alt="Lady's" class="max-h-12 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(219,39,119,0.3)]">
+          </div>
           <p class="text-xs text-zinc-400 mt-2 line-clamp-3">
             Diseños creados exclusivamente para la mujer: siluetas estilizadas, telas ultrasuaves, básicos
             indispensables y prendas fáciles de combinar.
