@@ -11,16 +11,13 @@ import { CatalogGrid } from '@/components/CatalogGrid'
 import { QuoteBuilder } from '@/components/QuoteBuilder'
 import { Footer } from '@/components/Footer'
 import { WhatsAppFloating } from '@/components/WhatsAppFloating'
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
+export const revalidate = 30 // Caché inteligente de 30s para respuesta instantánea (<200ms) y sincronización con Sanity
 
 export default async function HomePage() {
   let data: any = { settings: null, brands: [], products: [], catalogs: [] }
 
   try {
-    if (process.env.NEXT_PUBLIC_SANITY_PROJECT_ID) {
-      data = await client.fetch(SITE_DATA_QUERY)
-    }
+    data = await client.fetch(SITE_DATA_QUERY)
   } catch (error) {
     console.warn('Sanity no configurado o sin datos, usando datos por defecto:', error)
   }

@@ -114,6 +114,8 @@ export function FactorySection({ settings }: { settings?: any }) {
                 <img
                   src={photo1Url}
                   alt={photo1Title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 filter brightness-90 contrast-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/30 to-transparent" />
@@ -142,6 +144,8 @@ export function FactorySection({ settings }: { settings?: any }) {
                 <img
                   src={photo2Url}
                   alt={photo2Title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 filter brightness-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-black/30" />

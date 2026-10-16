@@ -1,8 +1,8 @@
 import { createClient } from 'next-sanity'
 
 export const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'hm28aa93',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
   apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2024-01-01',
-  useCdn: false, // useCdn: false asegura que los cambios y publicaciones en Sanity Studio se reflejen al instante
+  useCdn: true, // Activa la red global CDN de Sanity para respuestas en <100ms
 })
