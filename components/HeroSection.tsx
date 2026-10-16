@@ -6,9 +6,11 @@ import { urlForImage } from '@/sanity/lib/image'
 export function HeroSection({ brands, settings }: { brands?: any[]; settings?: any }) {
   const getBrandLogo = (brandName: string, defaultPath: string) => {
     if (brands && brands.length > 0) {
-      const found = brands.find(
-        (b) => b.name?.toLowerCase().trim() === brandName.toLowerCase().trim()
-      )
+      const target = brandName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]/g, '')
+      const found = brands.find((b) => {
+        const bNorm = (b.name || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]/g, '')
+        return bNorm.includes(target) || target.includes(bNorm)
+      })
       if (found && found.logo?.asset) {
         return urlForImage(found.logo).width(300).url()
       }

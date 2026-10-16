@@ -25,11 +25,6 @@ export const metadata: Metadata = {
   title: 'JHONAL 80 | Fábrica y Marcas de Confección en Colombia - Ventas al por Mayor',
   description:
     "Empresa colombiana especializada en confección y comercialización mayorista de camisetas, polos y lencería de alta rotación con las marcas Romper, Jhonal, Fénix y Lady's.",
-  icons: {
-    icon: '/buho-jhonal.png',
-    shortcut: '/buho-jhonal.png',
-    apple: '/buho-jhonal.png',
-  },
   openGraph: {
     title: 'JHONAL 80 | Fábrica y Marcas de Confección en Colombia',
     description:
