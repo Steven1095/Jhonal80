@@ -5,7 +5,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 export function Navbar({ settings }: { settings?: any }) {
   const [open, setOpen] = useState(false)
-  const wa = settings?.whatsappNumber || '573000000000'
+  const wa = settings?.whatsappNumber || '573127818899'
+  const companyName = settings?.companyName || 'JHONAL.80'
+  const announcementText =
+    settings?.announcementText ||
+    '¿Buscas rentabilidad para tu tienda o negocio? Conviértete en distribuidor oficial de Jhonal 80 y compra a precios directos de fábrica.'
 
   return (
     <>
@@ -15,7 +19,7 @@ export function Navbar({ settings }: { settings?: any }) {
           <Sparkles className="w-3 h-3" /> Oportunidad mayorista
         </span>
         <span className="font-medium text-zinc-100">
-          ¿Buscas rentabilidad para tu tienda o negocio? <strong>Conviértete en distribuidor oficial de Jhonal 80</strong> y compra a precios directos de fábrica.
+          {announcementText}
         </span>
         <a
           href="#distribuidores"
@@ -45,7 +49,13 @@ export function Navbar({ settings }: { settings?: any }) {
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
                 <span className="font-heading font-extrabold text-2xl sm:text-3xl tracking-wide text-white uppercase group-hover:text-zinc-100 transition">
-                  JHONAL.<span className="text-rose-500">80</span>
+                  {companyName.includes('80') ? (
+                    <>
+                      {companyName.replace(/\.?80/i, '')}.<span className="text-rose-500">80</span>
+                    </>
+                  ) : (
+                    companyName
+                  )}
                 </span>
                 <span className="hidden sm:inline-flex px-2 py-0.5 rounded-full text-[9px] font-black bg-zinc-800 text-zinc-300 border border-zinc-700 shadow-sm tracking-widest uppercase">
                   EST. 2007

@@ -1,12 +1,12 @@
 import { groq } from 'next-sanity'
 
 export const SITE_DATA_QUERY = groq`{
-  "settings": *[_type == "siteSettings"][0]{
+  "settings": *[_type == "siteSettings"] | order(_updatedAt desc)[0]{
     ...,
     "factoryVideoUrl": factoryVideoFile.asset->url
   },
-  "brands": *[_type == "brand"] | order(order asc),
-  "products": *[_type == "product"]{
+  "brands": *[_type == "brand"] | order(coalesce(order, 99) asc, _updatedAt desc),
+  "products": *[_type == "product" && coalesce(isFeatured, true) == true] | order(_createdAt asc){
     _id,
     title,
     referenceCode,
@@ -20,7 +20,7 @@ export const SITE_DATA_QUERY = groq`{
     "brandSlug": brand->slug.current,
     "brandColor": brand->accentColor
   },
-  "catalogs": *[_type == "catalog"]{
+  "catalogs": *[_type == "catalog"] | order(_createdAt asc){
     _id,
     title,
     year,

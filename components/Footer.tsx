@@ -1,6 +1,11 @@
 'use client'
 
 export function Footer({ settings }: { settings?: any }) {
+  const companyName = settings?.companyName || 'JHONAL.80'
+  const generalPhone = settings?.generalPhone || '+57 312 781 8899'
+  const contactEmail = settings?.contactEmail || 'contacto@jhonal80.com'
+  const address = settings?.address || 'Medellín / Colombia • Despachos a todo el país'
+
   return (
     <footer className="relative z-30 bg-[#060709] border-t-2 border-t-rose-600/50 py-16 text-zinc-300 text-xs shadow-2xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -18,8 +23,14 @@ export function Footer({ settings }: { settings?: any }) {
                 />
               </div>
               <div>
-                <span className="font-heading font-black text-lg tracking-wider text-white">
-                  JHONAL.<span className="text-rose-500">80</span>
+                <span className="font-heading font-black text-lg tracking-wider text-white uppercase">
+                  {companyName.includes('80') ? (
+                    <>
+                      {companyName.replace(/\.?80/i, '')}.<span className="text-rose-500">80</span>
+                    </>
+                  ) : (
+                    companyName
+                  )}
                 </span>
                 <div className="text-[9px] uppercase tracking-widest text-zinc-300 font-bold">
                   EST. 2007 • DISEÑO EXCLUSIVO
@@ -29,6 +40,11 @@ export function Footer({ settings }: { settings?: any }) {
             <p className="text-zinc-300 leading-relaxed text-xs">
               Fábrica y confección 100% colombiana. Surtimos a distribuidores, tiendas y almacenes con camisetas licradas, polos y conjuntos de alta rotación y precios directos de fábrica.
             </p>
+            <div className="text-[11px] text-zinc-400 space-y-1 pt-1">
+              <div>📍 {address}</div>
+              {generalPhone && <div>📞 {generalPhone}</div>}
+              {contactEmail && <div>✉️ {contactEmail}</div>}
+            </div>
           </div>
 
           {/* Col 2 */}
