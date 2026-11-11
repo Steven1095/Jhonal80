@@ -1,4 +1,5 @@
 import { defineField, defineType } from 'sanity'
+import { AccentColorInput } from '../components/ColorSwatchesInput'
 
 export const brandType = defineType({
   name: 'brand',
@@ -33,9 +34,12 @@ export const brandType = defineType({
     }),
     defineField({
       name: 'accentColor',
-      title: 'Color HEX de Acento',
+      title: 'Color Distintivo de la Marca (Bordes y Botones)',
       type: 'string',
-      description: 'Ej: #EA580C para Romper, #2563EB para Jhonal, #D97706 para Fénix, #DB2777 para Lady\'s',
+      description: 'Selecciona con un clic el color representativo de esta marca',
+      components: {
+        input: AccentColorInput,
+      },
     }),
     defineField({
       name: 'description',

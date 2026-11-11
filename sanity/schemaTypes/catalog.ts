@@ -1,4 +1,5 @@
 import { defineField, defineType } from 'sanity'
+import { AccentColorInput } from '../components/ColorSwatchesInput'
 
 export const catalogType = defineType({
     name: 'catalog',
@@ -10,6 +11,14 @@ export const catalogType = defineType({
         defineField({ name: 'year', title: 'Año / Temporada', type: 'string', initialValue: '2026' }),
         defineField({ name: 'description', title: 'Descripción breve', type: 'string' }),
         defineField({ name: 'pdfFile', title: 'Archivo PDF', type: 'file', options: { accept: '.pdf' }, validation: (Rule) => Rule.required() }),
-        defineField({ name: 'accentColor', title: 'Color de borde', type: 'string' }),
+        defineField({
+            name: 'accentColor',
+            title: 'Color del Borde Superior de la Tarjeta',
+            type: 'string',
+            description: 'Selecciona con un clic el color decorativo de la tarjeta del catálogo',
+            components: {
+                input: AccentColorInput,
+            },
+        }),
     ],
 })

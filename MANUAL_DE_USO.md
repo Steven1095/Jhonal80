@@ -160,15 +160,7 @@ Aquí administras la información individual de cada una de tus líneas (**Rompe
    * **Slug (Obligatorio):** Haz clic en el botón **`Generate`** que está a la derecha del campo. El sistema llenará este código automáticamente a partir del nombre.
    * **Logo de la Marca:** Haz clic en **Upload** y sube el logo de la marca. **Recomendación:** Usa una imagen en formato **`.PNG` con fondo transparente** para que luzca impecable sobre el fondo oscuro de la página.
    * **Eslogan / Segmento:** Frase corta que aparece en la esquina superior de la tarjeta (ej. *Streetwear y deportivo* o *Lencería y ropa interior*).
-   * **Color HEX de Acento:** Es el color que ilumina los bordes, botones y etiquetas de esa marca. Debe escribirse con el símbolo `#` seguido de 6 letras/números. Puedes usar estos códigos oficiales o cualquier otro:
-
-| Marca | Color | Código para copiar y pegar |
-| :--- | :--- | :--- |
-| **Romper** | Naranja | `#EA580C` |
-| **Jhonal** | Azul Rey | `#2563EB` |
-| **Fénix** | Dorado / Ámbar | `#D97706` |
-| **Lady's** | Rosa / Fucsia | `#DB2777` |
-
+   * **Color Distintivo de la Marca (Bordes y Botones):** Simplemente **haz clic sobre la tarjeta del color** que quieras usar (Naranja Romper, Azul Jhonal, Dorado Fénix, Rosa Lady's, Verde Esmeralda, etc.). No necesitas escribir códigos.
    * **Descripción de la línea:** Resumen de 2 o 3 renglones sobre qué tipo de prendas ofrece esta marca.
    * **Referencias más pedidas:** Ejemplo: `6016 / 6005` o `Invisible y encaje`.
    * **Tipo de tela / Tecnología textil:** Ejemplo: `Tela fría con spandex` o `Algodón licrado premium`.
@@ -180,10 +172,6 @@ Aquí administras la información individual de cada una de tus líneas (**Rompe
 ## 7. Sección 3: Prendas y Referencias (Catálogo Interactivo / Lookbook)
 
 Aquí subes las prendas que tus clientes pueden filtrar por marca y cotizar con un clic por WhatsApp.
-
-> [!WARNING]
-> **Importante al subir tu primera prenda:**
-> Mientras esta sección esté vacía en el panel, la página web muestra **16 prendas de muestra** para que el catálogo se vea lleno. **En el momento en que publiques tu primera prenda aquí, las 16 prendas de muestra se ocultarán** y la página mostrará únicamente las prendas que tú hayas subido en este panel. Por eso, te recomendamos subir al menos varias prendas de cada marca cuando decidas actualizar el catálogo.
 
 ### Paso a paso para agregar una Prenda
 
@@ -198,23 +186,11 @@ Aquí subes las prendas que tus clientes pueden filtrar por marca y cotizar con 
    * **Composición de Tela:** Aparece en la ficha técnica (ej. *96% Algodón Frío, 4% Spandex*).
    * **Silueta / Ajuste:** Aparece debajo de la tela (ej. *Regular fit* o *Tallas S, M, L, XL*).
 
-### Cómo agregar los circulitos de colores de la prenda (`Paleta de Colores Disponibles`)
-Cada tarjeta de prenda puede mostrar pequeños círculos con los colores en los que fabricas esa referencia:
-1. En el campo **Paleta de Colores Disponibles (Códigos HEX)**, haz clic en el botón **`Add item`**.
-2. Escribe el código de color con `#` (por ejemplo, `#FFFFFF` para blanco) y presiona Enter o vuelve a hacer clic en **`Add item`** para agregar otro color.
-3. Aquí tienes una tabla rápida de colores textiles comunes listos para copiar y pegar:
-
-| Color de la prenda | Código HEX | Color de la prenda | Código HEX |
-| :--- | :--- | :--- | :--- |
-| **Blanco** | `#FFFFFF` | **Azul Rey** | `#2563EB` |
-| **Negro** | `#18181B` | **Azul Oscuro / Naval** | `#1E293B` |
-| **Gris Claro / Perla** | `#9CA3AF` | **Azul Petróleo** | `#0284C7` |
-| **Gris Oscuro / Ratón** | `#4B5563` | **Verde Esmeralda** | `#059669` |
-| **Rojo** | `#DC2626` | **Café / Tierra** | `#78350F` |
-| **Vino Tinto / Burdeos** | `#881337` | **Palo de Rosa** | `#FCE7F3` |
-| **Fucsia / Rosa Intenso** | `#E11D48` | **Beige / Piel / Almendra** | `#E4D5C7` |
-
-*(Si buscas un tono específico, puedes escribir en Google "selector de color hex", elegir el tono en pantalla y copiar el código que empieza con `#`).*
+### Cómo elegir los colores de la prenda (`Paleta de Colores Disponibles`)
+Cada tarjeta de prenda muestra pequeños círculos con los colores en los que fabricas esa referencia:
+1. En el campo **Paleta de Colores Disponibles de la Prenda**, verás una cuadrícula visual con todos los colores textiles (Blanco, Negro, Gris Perla, Azul Rey, Vino Tinto, Café Tierra, Palo de Rosa, Beige, etc.).
+2. Simplemente **haz clic sobre los colores** que tenga disponibles la prenda para **marcarlos (`✓`)** o vuelve a hacerles clic para desmarcarlos.
+3. Si alguna prenda tiene un tono muy particular que no está en la cuadrícula, abajo a la derecha tienes el botón **`+ Agregar tono personalizado`** donde puedes elegir cualquier color visualmente.
 
 ### Cómo subir y encuadrar la Foto Principal
 1. En **Foto Principal**, haz clic en **Upload** y selecciona la foto de la prenda (en formato `.jpg`, `.jpeg` o `.png`).
@@ -229,9 +205,6 @@ Cada tarjeta de prenda puede mostrar pequeños círculos con los colores en los 
 
 Aquí administras los archivos PDF que los distribuidores pueden descargar en la sección **Catálogos de la colección**.
 
-> [!NOTE]
-> Al igual que con las prendas, mientras no hayas publicado ningún catálogo en esta sección, la web mostrará los catálogos iniciales precargados. En cuanto publiques el primer catálogo aquí, la página mostrará los catálogos que subas desde este panel.
-
 ### Paso a paso para subir un Catálogo PDF
 
 1. En el menú izquierdo, haz clic en **Catálogos PDF**.
@@ -242,7 +215,7 @@ Aquí administras los archivos PDF que los distribuidores pueden descargar en la
    * **Año / Temporada:** Por defecto aparece `2026`. Puedes cambiarlo por `2026 - Semestre II`, `Colección Fin de Año`, etc.
    * **Descripción breve:** Texto corto que explica qué incluye ese PDF (ej. *Conjuntos para hombre, camisetas en tela fría y polos deportivos*).
    * **Archivo PDF (Obligatorio):** Haz clic en **Upload** y selecciona el archivo `.pdf` desde tu computador. Espera unos segundos hasta que la barra de carga llegue al 100%.
-   * **Color de borde:** Escribe el código de color HEX para la línea decorativa superior de la tarjeta (ej. `#EA580C` para Romper, `#2563EB` para Jhonal, `#D97706` para Fénix o `#DB2777` para Lady's).
+   * **Color del Borde Superior de la Tarjeta:** Haz clic sobre el color que desees para la línea decorativa superior de la tarjeta (Naranja Romper, Azul Jhonal, Dorado Fénix, Rosa Lady's, etc.).
 4. Haz clic en **`Publish`** abajo a la derecha.
 
 ---

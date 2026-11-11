@@ -1,4 +1,5 @@
 import { defineField, defineType } from 'sanity'
+import { GarmentColorsInput } from '../components/ColorSwatchesInput'
 
 export const productType = defineType({
     name: 'product',
@@ -14,10 +15,13 @@ export const productType = defineType({
         defineField({ name: 'fit', title: 'Silueta / Ajuste', type: 'string', description: 'Ej: Corte Relajado Premium, Boxy Oversize' }),
         defineField({
             name: 'colors',
-            title: 'Paleta de Colores Disponibles (Códigos HEX)',
+            title: 'Paleta de Colores Disponibles de la Prenda',
             type: 'array',
             of: [{ type: 'string' }],
-            description: 'Ej: #93C5FD, #18181B, #FFFFFF',
+            description: 'Haz clic en los colores en los que fabricas esta prenda para activarlos o desactivarlos',
+            components: {
+                input: GarmentColorsInput,
+            },
         }),
         defineField({ name: 'image', title: 'Foto Principal', type: 'image', options: { hotspot: true } }),
         defineField({ name: 'isFeatured', title: '¿Destacar en Lookbook Inicial?', type: 'boolean', initialValue: true }),
