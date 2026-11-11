@@ -605,14 +605,12 @@ function TransparentMigrationLayout(props: any) {
 const studioConfigWithAutoSync = {
   ...config,
   studio: {
-    ...config.studio,
     components: {
-      ...config.studio?.components,
       layout: TransparentMigrationLayout,
     },
   },
 }
 
 export default function StudioPage() {
-  return <NextStudio config={studioConfigWithAutoSync} />
+  return <NextStudio config={studioConfigWithAutoSync as any} />
 }
