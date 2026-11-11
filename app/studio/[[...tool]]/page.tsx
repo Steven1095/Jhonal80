@@ -418,13 +418,23 @@ function TransparentMigrationLayout(props: any) {
 
     ;(async () => {
       try {
-        // Check current database state
+        // Check current database state (only published documents with a title count as valid)
         const state = await client.fetch(`{
-          "settings": *[_type == "siteSettings"] | order(_updatedAt desc)[0],
-          "brands": *[_type == "brand"],
-          "productsCount": count(*[_type == "product"]),
-          "catalogsCount": count(*[_type == "catalog"])
+          "settings": *[_type == "siteSettings" && !(_id in path("drafts.**"))] | order(_updatedAt desc)[0],
+          "brands": *[_type == "brand" && !(_id in path("drafts.**"))],
+          "productsCount": count(*[_type == "product" && !(_id in path("drafts.**")) && defined(title)]),
+          "catalogsCount": count(*[_type == "catalog" && !(_id in path("drafts.**")) && defined(title)]),
+          "emptyDraftIds": *[_type in ["product", "catalog"] && !defined(title)]._id
         }`)
+
+        // Clean up empty "Untitled" drafts in product and catalog
+        if (Array.isArray(state?.emptyDraftIds) && state.emptyDraftIds.length > 0) {
+          for (const draftId of state.emptyDraftIds) {
+            try {
+              await client.delete(draftId)
+            } catch {}
+          }
+        }
 
         // 1. Ensure siteSettings has all real website defaults filled in
         const existingSettings = state?.settings
@@ -543,14 +553,14 @@ function TransparentMigrationLayout(props: any) {
           }
         }
 
-        // 3. Seed all 16 real products if no products exist yet
-        if ((state?.productsCount || 0) === 0) {
+        // 3. Seed all 16 real products if fewer than 16 valid products exist
+        if ((state?.productsCount || 0) < 16) {
           for (const pSeed of PRODUCTS_SEED) {
             const imgAssetId = await uploadPublicAsset(client, pSeed.imagePath, 'image')
             const resolvedBrandId = brandIdMap[pSeed.brandId] || pSeed.brandId
             const { imagePath, brandId, ...productFields } = pSeed
 
-            await client.createIfNotExists({
+            await client.createOrReplace({
               _type: 'product',
               ...productFields,
               isFeatured: true,
@@ -570,27 +580,29 @@ function TransparentMigrationLayout(props: any) {
           }
         }
 
-        // 4. Seed all 7 real PDF catalogs if no catalogs exist yet
-        if ((state?.catalogsCount || 0) === 0) {
+        // 4. Seed all 7 real PDF catalogs if fewer than 7 valid catalogs exist
+        if ((state?.catalogsCount || 0) < 7) {
           for (const cSeed of CATALOGS_SEED) {
             const pdfAssetId = await uploadPublicAsset(client, cSeed.pdfPath, 'file')
             const resolvedBrandId = brandIdMap[cSeed.brandId] || cSeed.brandId
             const { pdfPath, brandId, ...catalogFields } = cSeed
 
-            if (pdfAssetId) {
-              await client.createIfNotExists({
-                _type: 'catalog',
-                ...catalogFields,
-                brand: {
-                  _type: 'reference',
-                  _ref: resolvedBrandId,
-                },
-                pdfFile: {
-                  _type: 'file',
-                  asset: { _type: 'reference', _ref: pdfAssetId },
-                },
-              })
-            }
+            await client.createOrReplace({
+              _type: 'catalog',
+              ...catalogFields,
+              brand: {
+                _type: 'reference',
+                _ref: resolvedBrandId,
+              },
+              ...(pdfAssetId
+                ? {
+                    pdfFile: {
+                      _type: 'file',
+                      asset: { _type: 'reference', _ref: pdfAssetId },
+                    },
+                  }
+                : {}),
+            })
           }
         }
       } catch (err) {
